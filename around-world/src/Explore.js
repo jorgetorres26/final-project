@@ -22,7 +22,7 @@ class Explore extends React.Component {
       <div >
       <h2>This is the Explore page</h2>
         <div id="mapid">
-          <Map style={{height: "180px"}} center={position} zoom={this.state.zoom}>
+          <Map style={{height: "500px"}} center={position} zoom={this.state.zoom}>
             <TileLayer
               attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
               url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
