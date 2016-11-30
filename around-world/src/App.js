@@ -65,7 +65,7 @@ class Footer extends React.Component {
               <img src="http://avatarbox.net/avatars/img29/mr_burns_sneaky_avatar_picture_14912.gif" className="img-circle" alt="the-brains" />
               <br />
               <h4 className="footertext">Sarah<p className="text-muted">Developer</p></h4>
-              <p className="footertext">You can thank all the crazy programming here to this guy.</p><br />
+              <p className="footertext">You can thank all the crazy programming here to this lady.</p><br />
             </center>
           </div>
 
