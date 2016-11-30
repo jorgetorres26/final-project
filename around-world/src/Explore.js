@@ -19,4 +19,6 @@ class Explore extends React.Component {
   }
 }
 
+
+<script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
 export default Explore;
