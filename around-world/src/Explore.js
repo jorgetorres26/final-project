@@ -18,7 +18,7 @@ class Explore extends React.Component {
     var position = [this.state.lat, this.state.lng];
     return (
       <div >
-      <h1>This is the Explore page</h1>
+      <h2>This is the Explore page</h2>
         <div id="mapid">
           <Map style={{height: "180px"}} center={position} zoom={this.state.zoom}>
             <TileLayer

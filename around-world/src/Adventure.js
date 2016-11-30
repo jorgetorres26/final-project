@@ -12,8 +12,6 @@ class Adventure extends React.Component {
     return (
       <div >
       <h2>This is the Adventure page</h2>
-        <button className="quizButton">Take the Quiz </button>
-      <h1>This is the Adventure page</h1>
         <StartQuiz/>
 
       </div>
