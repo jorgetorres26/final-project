@@ -37,7 +37,7 @@ class NavBar extends React.Component {
 
   render() {
     return (
-      <nav className="navbar navbar-light bg-faded">
+      <Nav className="navbar navbar-light bg-faded">
         <ul className="nav navbar-nav">
           <li className="nav-item">
             <Link to="/explore" activeClassName="activeLink" className="nav-link">Explore</Link>
@@ -52,7 +52,7 @@ class NavBar extends React.Component {
             <Link to="/home" activeClassName="activeLink" className="nav-link">Home</Link>
           </li>
         </ul>
-      </nav>
+      </Nav>
     );
   }
 }
@@ -60,6 +60,8 @@ class NavBar extends React.Component {
 class Footer extends React.Component {
   render() {
     return (
+      <div id="mapPic">
+        
       <div className="container">
 
         <div className="row">
@@ -103,6 +105,7 @@ class Footer extends React.Component {
 
         </div>
       </div>
+      </div>
     );
   }
 }
@@ -114,8 +117,7 @@ class Map extends React.Component {
       <div id="mapPic">
 
       </div>
-    )
-  }
+    )}
 
 }
 export default App;
