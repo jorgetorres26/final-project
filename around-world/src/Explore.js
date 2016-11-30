@@ -9,8 +9,8 @@ class Explore extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      lat: 51.505,
-      lng: -0.09,
+      lat: 47.655548,
+      lng: -122.303200,
       zoom: 13,
     };
   }
@@ -27,7 +27,7 @@ class Explore extends React.Component {
             />
             <Marker position={position}>
               <Popup>
-                <span>A pretty CSS3 popup. <br/> Easily customizable.</span>
+                <span>Its Map of UW campus bro. <br/> Easily customizable fam.</span>
               </Popup>
             </Marker>
           </Map>
