@@ -11,7 +11,7 @@ class Explore extends React.Component {
   render() {
     return (
       <div >
-      <h1>This is the Explore page</h1>
+      <h2>This is the Explore page</h2>
         <div id="mapid">
         </div>
       </div>
