@@ -1,21 +1,59 @@
-import React, { Component } from 'react';
+import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {Nav, NavItem,NavDropdown,MenuItem} from 'react-bootstrap';
 
-class App extends Component {
+class App extends React.Component {
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div>
+        <Header/>
+        <NavBar/>
+        <Map/>
       </div>
     );
   }
 }
 
+class Header extends React.Component{
+  render() {
+    return (
+        <div>
+          <h2>Around the World</h2>
+        </div> 
+    );
+  }
+}
+
+class NavBar extends React.Component{
+
+  render() {
+    return (
+      <nav className="navbar navbar-light bg-faded">
+        <ul className="nav navbar-nav">
+          <li className="nav-item active">
+            <a className="nav-link" href="#">Explore <span className="sr-only">(current)</span></a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="#">Adventure</a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="#">Discover</a>
+          </li>
+        </ul>
+      </nav>
+    );
+  }
+}
+
+class Map extends React.Component{
+  render() {
+    return (
+      <div id = "mapPic">
+        
+      </div>
+    )
+  }
+
+}
 export default App;
