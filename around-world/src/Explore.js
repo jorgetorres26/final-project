@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link, hashHistory } from 'react-router';
 import './Explore.css';
+import Leaflet from 'leaflet';
+
 
 
 
@@ -18,6 +20,7 @@ class Explore extends React.Component {
     );
   }
 }
+
 
 
 <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
