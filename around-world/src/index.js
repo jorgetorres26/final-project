@@ -17,10 +17,13 @@ ReactDOM.render(
     <Route path="adventure" component={Adventure}/>
     <Route path="discover" component={Discover}/>
     </Route>
-    
-    
-      
   </Router>,
+  
+
+
   
   document.getElementById('root')
 );
+
+//I feel like there should be another reactDom here for the maps but not sure. I'll check it out though
+

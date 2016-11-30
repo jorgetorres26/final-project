@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link, hashHistory } from 'react-router';
 import './Explore.css';
+
 import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
+
 
 
 
@@ -36,6 +38,5 @@ class Explore extends React.Component {
     );
   }
 }
-
 
 export default Explore;
