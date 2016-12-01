@@ -21,6 +21,10 @@ var randomInterests = _.shuffle(interests);
 
 console.log(randomInterests);
 
+var top5RandomInterests = randomInterests.splice(5);
+
+console.log(top5RandomInterests);
+// Splice 
 
 class Discover extends React.Component {
   constructor(props) {
