@@ -38,7 +38,6 @@ class NavBar extends React.Component {
   render() {
     return (
       <Nav className="navbar navbar-light bg-faded">
-        <div className="navContainer">
         <ul className="nav navbar-nav">
           <li className="nav-item">
             <Link to="/explore" activeClassName="activeLink" className="nav-link">Explore</Link>
@@ -53,7 +52,6 @@ class NavBar extends React.Component {
             <Link to="/home" activeClassName="activeLink" className="nav-link">Home</Link>
           </li>
         </ul>
-        </div>
       </Nav>
     );
   }
