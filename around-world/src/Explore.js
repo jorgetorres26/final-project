@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, hashHistory } from 'react-router';
-import './Explore.css';
+import './A_D_E.css';
 
 import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
 
@@ -21,8 +21,8 @@ class Explore extends React.Component {
     return (
       <div >
       <h2>This is the Explore page</h2>
-        <div id="mapid">
-          <Map style={{height: "500px"}} center={position} zoom={this.state.zoom}>
+        <div id='contentContainer' id="mapid">
+          <Map style={{height: "400px"}} center={position} zoom={this.state.zoom}>
             <TileLayer
               attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
               url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'

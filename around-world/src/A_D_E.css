@@ -1,0 +1,8 @@
+#contentContainer{
+    min-height: 400px;
+    max-height: 700px;
+}
+
+#mapid {
+    height: 400px; 
+}
