@@ -56,7 +56,8 @@ class Quiz extends React.Component {
   render() {
     return (
       <div id="quizContainer">
-        <p className="questionText"> This is a question</p>
+        <div className="image">Image goes Here</div>
+        <p className="questionText">Question goes Here?</p>
         <div className="answers">
           <Button className="answerButton">Answer 1</Button>
           <Button className="answerButton">Answer 2</Button>

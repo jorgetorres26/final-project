@@ -17,6 +17,14 @@
 div.answers {
     display: wrap;
 }
+.image {
+    margin-left: auto;
+    margin-right: auto;
+    height:200px;
+    width: 800px;
+    background-position: center;
+    background: deeppink;
+}
 
 Button.answerButton {
     border: 2px solid black;
@@ -27,10 +35,12 @@ Button.answerButton {
     color: white;
  
 }
+
 Button.hidden{
     visibility: hidden;
     display: none
 }
+
 Button.show{
     visibility: visible;
 }
