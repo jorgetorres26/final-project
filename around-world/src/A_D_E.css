@@ -1,13 +1,44 @@
 #contentContainer{
     min-height: 400px;
     max-height: 700px;
+    align-content: center;
 }
 
 #mapid {
     height: 400px; 
 }
 
+
 .card-img-top{
     height: 175px;
     width: 350px;
+}
+.questionText{
+    font-size: x-large;
+    text-align: center;
+    margin: 10px;
+}
+
+div.answers {
+    display: wrap;
+}
+.image {
+    display: block;
+    max-height:300px;
+    max-width: 700px;
+    background-position: center;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    align-content: center;
+}
+
+Button.answerButton {
+    border: 2px solid black;
+    width: 49%;
+    margin: 5px;
+    background: rebeccapurple;
+    font-weight: 500;
+    color: white;
+ 
 }
