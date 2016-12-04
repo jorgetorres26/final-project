@@ -18,21 +18,34 @@ class Adventure extends React.Component {
   //will change the status of the quizStarted when the start button is clicked
    quizStart() {
       this.setState({quizStarted: true}); 
-      
     }
 // Show start button for quiz. Once clicked, quiz starts and start button is hidden
+
   render() {
+     console.log(this.state);
+    if(this.state.quizStarted == false){
     console.log(this.state);
     return (
       <div >
         <h2>This is the Adventure page</h2>
         <div id="contentContainer">
           <Button className="startButton" bsStyle="primary" bsSize="large" block onClick={this.quizStart}>Start the Quiz</Button>
-          <Quiz />
         </div>
       </div>
     );
   }
+  else{
+    return(
+      <div>
+      <h2> This is the Adventure Quiz</h2>
+      <div id="contentContainer">
+      <Quiz/>
+      </div>
+      </div>
+    );
+  }
+  }
+  
 }
 
 // Basic Template for the quiz pages - Sarah
