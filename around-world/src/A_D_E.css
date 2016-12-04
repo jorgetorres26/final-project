@@ -6,3 +6,8 @@
 #mapid {
     height: 400px; 
 }
+
+.card-img-top{
+    height: 175px;
+    width: 350px;
+}
