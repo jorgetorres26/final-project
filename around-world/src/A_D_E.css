@@ -18,12 +18,14 @@ div.answers {
     display: wrap;
 }
 .image {
+    display: block;
+    max-height:300px;
+    max-width: 700px;
+    background-position: center;
     margin-left: auto;
     margin-right: auto;
-    height:200px;
-    width: 800px;
-    background-position: center;
-    background: deeppink;
+    align-items: center;
+    align-content: center;
 }
 
 Button.answerButton {
@@ -34,13 +36,4 @@ Button.answerButton {
     font-weight: 500;
     color: white;
  
-}
-
-Button.hidden{
-    visibility: hidden;
-    display: none
-}
-
-Button.show{
-    visibility: visible;
 }

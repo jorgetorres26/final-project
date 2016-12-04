@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Button } from 'react-bootstrap';
+import { Button, Image } from 'react-bootstrap';
 import { Link, hashHistory } from 'react-router';
 import './A_D_E.css';
 import _ from 'lodash';
@@ -48,42 +48,108 @@ class Adventure extends React.Component {
   
 }
 
-// Basic Template for the quiz pages - Sarah
+// The quiz pages - Sarah
 class Quiz extends React.Component {
   constructor(props) {
     super(props);
+    this.state ={
+      answerNum:0,
+      answerArray: []
+    }
+    this.handleClick = this.handleClick.bind(this);
+  }
+  handleClick() {
+    var i = this.state.answerNum;
+    i++;
+    this.setState({answerNum: i});
+    console.log(this.state);
+
   }
   render() {
-    return (
+    var page = this.state.answerNum;
+    switch(page){
+      case 0: return (
       <div id="quizContainer">
-        <div className="image">Image goes Here</div>
-        <p className="questionText">Question goes Here?</p>
+        <Image className = "image"src = "http://images.mentalfloss.com/sites/default/files/styles/article_640x430/public/166142726.jpg" rounded></Image>
+        <p className="questionText">What is your budget?</p>
         <div className="answers">
-          <Button className="answerButton">Answer 1</Button>
-          <Button className="answerButton">Answer 2</Button>
-          <Button className="answerButton">Answer 3</Button>
-          <Button className="answerButton">Answer 4</Button>
+          <Button className="answerButton" onClick={this.handleClick}>$ Almost Free</Button>
+          <Button className="answerButton" onClick={this.handleClick}>$$ Little Money</Button>
+          <Button className="answerButton" onClick={this.handleClick}>$$$ Some Money</Button>
+          <Button className="answerButton" onClick={this.handleClick}>$$$$ No Budget</Button>
           </div>
       </div>
     );
-  }
+    case 1:  return (
+      <div id="quizContainer">
+        <Image className = "image"src = "http://www.worldatlas.com/aatlas/newart/continentslg.gif" rounded></Image>
+        <p className="questionText">Where would you prefer to explore?</p>
+        <div className="answers">
+          <Button className="answerButton" onClick={this.handleClick}>North or South America</Button>
+          <Button className="answerButton" onClick={this.handleClick}>Africa</Button>
+          <Button className="answerButton" onClick={this.handleClick}>Europe or Australia</Button>
+          <Button className="answerButton" onClick={this.handleClick}>Asia</Button>
+          </div>
+      </div>
+    );
+    case 2:   return (
+      <div id="quizContainer">
+        <Image className = "image"src = "http://www.familysmart.net/images/posts/family-travel-tips.jpg" rounded></Image>
+        <p className="questionText">Who are you traveling with?</p>
+        <div className="answers">
+          <Button className="answerButton" onClick={this.handleClick}>Me, Myself, and I</Button>
+          <Button className="answerButton" onClick={this.handleClick}>My Lover</Button>
+          <Button className="answerButton" onClick={this.handleClick}>My Family</Button>
+          <Button className="answerButton" onClick={this.handleClick}>My Friends</Button>
+          </div>
+      </div>
+    );
+    case 3:   return (
+      <div id="quizContainer">
+        <Image className = "image"src = "http://wdy.h-cdn.co/assets/cm/15/09/54f0fbd48fba0_-_1-couple-vacation-tropical-lgn.jpg" rounded></Image>
+        <p className="questionText">Why are you traveling?</p>
+        <div className="answers">
+          <Button className="answerButton" onClick={this.handleClick}>I Want to Celebrate</Button>
+          <Button className="answerButton" onClick={this.handleClick}>I Want to Escape and Relax</Button>
+          <Button className="answerButton" onClick={this.handleClick}>I Want to Adventure and Explore</Button>
+          <Button className="answerButton" onClick={this.handleClick}>I want to Learn Something New</Button>
+          </div>
+      </div>
+    );
+    case 4:   return (
+      <div id="quizContainer">
+        <Image className = "image"src = "https://www.visitnc.com/resimg.php/imgcrop/2/38377/preview/800/480/HikeWaterfall.jpg" rounded></Image>
+        <p className="questionText">How Close Would You Like to be to Nature?</p>
+        <div className="answers">
+          <Button className="answerButton" onClick={this.handleClick}>Super Close</Button>
+          <Button className="answerButton" onClick={this.handleClick}>Semi Close</Button>
+          <Button className="answerButton" onClick={this.handleClick}>Not So Close</Button>
+          <Button className="answerButton" onClick={this.handleClick}>Nature? No thanks!</Button>
+          </div>
+      </div>
+    );
+    case 5:   return (
+      <div id="quizContainer">
+        <Image className = "image"src = "http://images.r.cruisecritic.com/features/2016/03/10-lux-cruise-main.jpg" rounded></Image>
+        <p className="questionText">How would you like to travel?</p>
+        <div className="answers">
+          <Button className="answerButton" onClick={this.handleClick}>Car or Bus</Button>
+          <Button className="answerButton" onClick={this.handleClick}>Boat</Button>
+          <Button className="answerButton" onClick={this.handleClick}>Plane</Button>
+          <Button className="answerButton" onClick={this.handleClick}>No Preference</Button>
+          </div>
+      </div>
+    );
+    case 6: 
+    //this should be the results
+      return (
+      <div id="quizContainer">
+        <p> THIS IS WHERE THE RESULTS GO</p>
+      </div>
+    );
+    }
 
 }
+}
 
-//an array of questions and answers - Sarah
-var qNa = [
-  { qID: 1, q: "Who are you traveling with?", a1: "Me, Myself, and I", a2: "My Significant Other", a3: "My Friends", a4: "My family" },
-  { qID: 2, q: "What is your budget", a1: "$ Almost Free", a2: "$$ Little Money", a3: "$$$ Some Money", a4: "$$$$ No Budget" },
-  { qID: 3, q: "When are you planning on traveling?", a1: "Winter", a2: "Spring", a3: "Summer", a4: "Fall" },
-  { qID: 4, q: "Where would you like to explore?", a1: "North or South America", a2: "Europe", a3: "Asia", a4: "Africa" },
-  { qID: 5, q: "Why are you traveling?", a1: "I Need to Celebrate", a2: "I Need to Escape", a3: "I Need to Adventure", a4: "I Need to Learn" },
-  {
-    qID: 6, q: "Who are you?", a1: "I'm a Thinker: Desides with Head, Critical and Driven by Thought", a2: "I'm a Feeler: Desides with Heart, Empathetic, and Driven by Emotion",
-    a3: "I'm an Authority: Structured, Controlled, and Organized", a4: "I'm an Observer: Flexible, Relaxed and Spontanious"
-  },
-  { qID: 7, q: "What is your idea of a good time?", a1: "Going on a Hike", a2: "Having a Spa Day", a3: "Going to a Sporting Event", a4: "Dining Somewhere New" },
-  { qID: 8, q: "When are you most active?", a1: "Early Morning", a2: "Mid Day", a3: "Afternoon", a4: "Night" },
-  { qID: 9, q: "Where would you prefer to be?", a1: "At an Amuesment Attraction", a2: "Exposed to Nature", a3: "At a Fancy Restaurant", a4: "On a Beach" },
-  { qID: 10, q: "What setting do you see yourself in?", a1: "Rural", a2: "Tropical", a3: "Urban", a4: "Polar" }
-]
 export default Adventure;
