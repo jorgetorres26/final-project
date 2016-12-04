@@ -1,8 +1,36 @@
 #contentContainer{
     min-height: 400px;
     max-height: 700px;
+    align-content: center;
 }
 
 #mapid {
     height: 400px; 
+}
+
+.questionText{
+    font-size: x-large;
+    text-align: center;
+    margin: 10px;
+}
+
+div.answers {
+    display: wrap;
+}
+
+Button.answerButton {
+    border: 2px solid black;
+    width: 49%;
+    margin: 5px;
+    background: rebeccapurple;
+    font-weight: 500;
+    color: white;
+ 
+}
+Button.hidden{
+    visibility: hidden;
+    display: none
+}
+Button.show{
+    visibility: visible;
 }
