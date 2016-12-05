@@ -13,6 +13,7 @@ import {Router, Route, hashHistory, IndexRoute} from 'react-router';
 ReactDOM.render(
   <Router history={hashHistory}>
     <Route path="/" component={App}>
+    <IndexRoute component={Homepage} />
     <Route path="home" component={Homepage}/>
     <Route path="explore" component={Explore}/>
     <Route path="adventure" component={Adventure}/>
