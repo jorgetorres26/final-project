@@ -4,6 +4,7 @@ import { Button, Image } from 'react-bootstrap';
 import { Link, hashHistory } from 'react-router';
 import './A_D_E.css';
 import _ from 'lodash';
+import Controller from './Controller';
 
 // This is Page is made by me :) - Sarah
 
@@ -54,18 +55,32 @@ class Quiz extends React.Component {
     super(props);
     this.state ={
       answerNum:0,
-      answerArray: []
+      answerArray: [],
+      result: []
     }
     this.handleClick = this.handleClick.bind(this);
+    this.fetchData = this.fetchData.bind(this);
   }
-  handleClick(event) {
+  handleClick(answer) {
     var i = this.state.answerNum;
     i++;
     this.setState({answerNum: i});
     var j = this.state.answerArray;
-    //this isn't working - Sarah
-    j.push(document.getElementById(event));
+    j.push(answer);
     console.log(this.state);
+  }
+  fetchData(ArrayofTags){
+    var thisComp = this;
+    var longString = ""
+    ArrayofTags.forEach(function(element) {
+      longString = " "+element;
+    }, this);
+    Controller.searchTMDB(longString)
+    .then(function(data){
+        this.setState({result: [data.results[0]]})
+        console.log(this.state.result);
+      
+    });
 
   }
   render() {
@@ -76,10 +91,10 @@ class Quiz extends React.Component {
         <Image className = "image"src = "http://images.mentalfloss.com/sites/default/files/styles/article_640x430/public/166142726.jpg" rounded></Image>
         <p className="questionText">What is your budget?</p>
         <div className="answers">
-          <Button className="answerButton" id = "$" onClick={this.handleClick}>$ Almost Free</Button>
-          <Button className="answerButton" id = "$$" onClick={this.handleClick}>$$ Little Money</Button>
-          <Button className="answerButton" id = "$$$"onClick={this.handleClick}>$$$ Some Money</Button>
-          <Button className="answerButton" id = "" onClick={this.handleClick}>$$$$ No Budget</Button>
+          <Button className="answerButton" onClick={(e) => { this.handleClick('most affordable') }}>$ Almost Free</Button>
+          <Button className="answerButton" onClick={(e) => { this.handleClick('cheap')}}>$$ Little Money</Button>
+          <Button className="answerButton" onClick={(e) => { this.handleClick('expensive')}}>$$$ Some Money</Button>
+          <Button className="answerButton" onClick={(e) => { this.handleClick('') }}>$$$$ No Budget</Button>
           </div>
       </div>
     );
@@ -88,10 +103,10 @@ class Quiz extends React.Component {
         <Image className = "image"src = "http://www.worldatlas.com/aatlas/newart/continentslg.gif" rounded></Image>
         <p className="questionText">Where would you prefer to explore?</p>
         <div className="answers">
-          <Button className="answerButton" onClick={this.handleClick}>North or South America</Button>
-          <Button className="answerButton" onClick={this.handleClick}>Africa</Button>
-          <Button className="answerButton" onClick={this.handleClick}>Europe or Australia</Button>
-          <Button className="answerButton" onClick={this.handleClick}>Asia</Button>
+          <Button className="answerButton" onClick={(e) => { this.handleClick('America') }}>North or South America</Button>
+          <Button className="answerButton" onClick={(e) => { this.handleClick('Africa') }}>Africa</Button>
+          <Button className="answerButton" onClick={(e) => { this.handleClick('Europe') }}>Europe</Button>
+          <Button className="answerButton" onClick={(e) => { this.handleClick('Asia') }}>Asia</Button>
           </div>
       </div>
     );
@@ -100,10 +115,10 @@ class Quiz extends React.Component {
         <Image className = "image"src = "http://www.familysmart.net/images/posts/family-travel-tips.jpg" rounded></Image>
         <p className="questionText">Who are you traveling with?</p>
         <div className="answers">
-          <Button className="answerButton" onClick={this.handleClick}>Me, Myself, and I</Button>
-          <Button className="answerButton" onClick={this.handleClick}>My Lover</Button>
-          <Button className="answerButton" onClick={this.handleClick}>My Family</Button>
-          <Button className="answerButton" onClick={this.handleClick}>My Friends</Button>
+          <Button className="answerButton" onClick={(e) => { this.handleClick('Singles') }}>Me, Myself, and I</Button>
+          <Button className="answerButton" onClick={(e) => { this.handleClick('Romantic ') }}>My Lover</Button>
+          <Button className="answerButton" onClick={(e) => { this.handleClick('Family') }}>My Family</Button>
+          <Button className="answerButton" onClick={(e) => { this.handleClick('Group') }}>My Friends</Button>
           </div>
       </div>
     );
@@ -112,10 +127,10 @@ class Quiz extends React.Component {
         <Image className = "image"src = "http://wdy.h-cdn.co/assets/cm/15/09/54f0fbd48fba0_-_1-couple-vacation-tropical-lgn.jpg" rounded></Image>
         <p className="questionText">Why are you traveling?</p>
         <div className="answers">
-          <Button className="answerButton" onClick={this.handleClick}>I Want to Celebrate</Button>
-          <Button className="answerButton" onClick={this.handleClick}>I Want to Escape and Relax</Button>
-          <Button className="answerButton" onClick={this.handleClick}>I Want to Adventure and Explore</Button>
-          <Button className="answerButton" onClick={this.handleClick}>I want to Learn Something New</Button>
+          <Button className="answerButton" onClick={(e) => { this.handleClick('Bar Club') }}>I Want to Celebrate</Button>
+          <Button className="answerButton" onClick={(e) => { this.handleClick('Spa Beach') }}>I Want to Escape and Relax</Button>
+          <Button className="answerButton" onClick={(e) => { this.handleClick('Ziplining Rock-Climbing') }}>I Want to Adventure and Explore</Button>
+          <Button className="answerButton" onClick={(e) => { this.handleClick('Museum') }}>I want to Learn Something New</Button>
           </div>
       </div>
     );
@@ -124,10 +139,10 @@ class Quiz extends React.Component {
         <Image className = "image"src = "https://www.visitnc.com/resimg.php/imgcrop/2/38377/preview/800/480/HikeWaterfall.jpg" rounded></Image>
         <p className="questionText">How Close Would You Like to be to Nature?</p>
         <div className="answers">
-          <Button className="answerButton" onClick={this.handleClick}>Super Close</Button>
-          <Button className="answerButton" onClick={this.handleClick}>Semi Close</Button>
-          <Button className="answerButton" onClick={this.handleClick}>Not So Close</Button>
-          <Button className="answerButton" onClick={this.handleClick}>Nature? No thanks!</Button>
+          <Button className="answerButton" onClick={(e) => { this.handleClick('National Park') }}>Super Close</Button>
+          <Button className="answerButton" onClick={(e) => { this.handleClick('Waterfall') }}>Semi Close</Button>
+          <Button className="answerButton" onClick={(e) => { this.handleClick('Lakes') }}>Not So Close</Button>
+          <Button className="answerButton" onClick={(e) => { this.handleClick('') }}>Nature? No thanks!</Button>
           </div>
       </div>
     );
@@ -136,21 +151,20 @@ class Quiz extends React.Component {
         <Image className = "image"src = "http://images.r.cruisecritic.com/features/2016/03/10-lux-cruise-main.jpg" rounded></Image>
         <p className="questionText">How would you like to travel?</p>
         <div className="answers">
-          <Button className="answerButton" onClick={this.handleClick}>Car or Bus</Button>
-          <Button className="answerButton" onClick={this.handleClick}>Boat</Button>
-          <Button className="answerButton" onClick={this.handleClick}>Plane</Button>
-          <Button className="answerButton" onClick={this.handleClick}>No Preference</Button>
+          <Button className="answerButton" onClick={(e) => { this.handleClick('') }}>Car or Bus</Button>
+          <Button className="answerButton" onClick={(e) => { this.handleClick('Cruise') }}>Boat</Button>
+          <Button className="answerButton" onClick={(e) => { this.handleClick('') }}>Plane</Button>
+          <Button className="answerButton" onClick={(e) => { this.handleClick('') }}>No Preference</Button>
           </div>
       </div>
     );
     case 6: 
     //this should be the results
-    
       return (
       <div id="quizContainer">
         <Image className = "image" src = "https://cdn.gobankingrates.com/wp-content/uploads/2015/05/las_vegas_strip.jpg" rounded></Image>
         <h3> RESULTS: </h3>
-        <p className = "resultsInfo">Whether you’re a high roller or a low-key lounger, Las Vegas has something to suit your vacation taste. Sample fare from top chefs and cornucopian buffets, try your luck at one of the world’s premier casinos, or take in a spectacular show. Just wandering the Strip is enough to get your heart pumping. Once you’ve had enough of the razzle-dazzle, wave hello to the toothy sea life at the Mandalay Bay Shark Reef, hike Red Rock Canyon, or visit the Neon Museum, where old signs take on new life.</p>
+        <p className = "resultsInfo"></p>
       </div>
     );
     }
