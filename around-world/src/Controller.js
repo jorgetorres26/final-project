@@ -17,20 +17,7 @@ var controller = {
     console.log(tmdbUri);
     //console.log(fetch('https://www.googleapis.com/youtube/v3/videos?id=As2_UloSKDw&key=AIzaSyA-6GHSwcPBEmaZJQ2vSXaUzKPH7YJqvNU&part=snippet,statistics'));
     return fetch(tmdbUri)
-      .then(function(res) {
-        /*res.set({
-                'Access-Control-Allow-Origin': 'http://localhost:3000',
-                'Access-Control-Allow-Methods':'POST, GET, OPTIONS',
-                'Access-Control-Allow-Headers':'*',
-                'Access-Control-Allow-Credentials': true});
-                */
-                /*res.set({
-                'Access-Control-Allow-Origin': 'http://localhost:3000',
-                'Access-Control-Allow-Methods':'POST, GET, OPTIONS',
-                'Access-Control-Allow-Headers':'*',
-                'Access-Control-Allow-Credentials': true});
-                */
-              
+      .then(function(res) {   
         return res.json()
       })
   }
