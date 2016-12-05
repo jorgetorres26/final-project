@@ -62,6 +62,8 @@ class Quiz extends React.Component {
     var i = this.state.answerNum;
     i++;
     this.setState({answerNum: i});
+    var j = this.state.answerArray;
+    j.push(document.getElementsByClassName("answerButton"));
     console.log(this.state);
 
   }
