@@ -95,8 +95,12 @@ fetch(url).then(function(response){
 
 */
 
+// var randomCountries = _.shuffle(countries);
+
+// var places = [Arts, Beaches,Cycling, Birding, Business, Camping, Gambling, Golfing, Hiking, Parks, Nightlife, Shopping, Skiing, Surfing, Kayaking]
+
 var places = 
-{ Arts :
+[ //  Arts
   [
     { name: "Louvre Museum", loc: "Paris, France", site: "https://www.google.com/maps/place/Louvre+Museum", photo: "http://traveldigg.com/wp-content/uploads/2016/06/Louvre-Museum-Pictures-720x404.jpg"}, 
     { name: "Millennium Park", loc: "Chicago, USA", site: "https://www.google.com/maps/place/Millennium+Park+Chicago"}, 
@@ -109,9 +113,9 @@ var places =
     { name: "Lakshman Temple", loc: "Khajuraho, India", site: "https://www.google.com/maps/place/Lakshman+Temple+India"},
     { name: "Museo Nacional de Antropologia", loc: "Mexico City, Mexico", site: "https://www.google.com/maps/place/Museo+Nacional+de+Antropologia+Mexico"}
   ] ,
-  Beaches:
+ // Beaches
   [
-    { name: "Punta Cana", loc: "Punta Cana, Dominican Republic", site: "https://www.google.com/maps/place/punta+cana", }, 
+    { name: "Punta Cana", loc: "Punta Cana, Dominican Republic", site: "https://www.google.com/maps/place/punta+cana" }, 
     { name: "Playa Flamenco", loc: "Culebra, Puerto Rico", site: "https://www.google.com/maps/place/Bahia+Flamenco+puerto+rico"}, 
     { name: "Playa del Carmen", loc: "Yucatan, Mexico", site: "https://www.google.com/maps/place/Playa+del+Carmen+Mexico"},
     { name: "Maui Beach", loc: "Hawaii, USA", site: "https://www.google.com/maps/place/Maui+Hawaii"},
@@ -123,7 +127,7 @@ var places =
     { name: "Palm Beach", loc: "Aruba", site: "https://www.google.com/maps/place/palm+beach+aruba"}
   ] ,
 
-  Cycling:
+  // Cycling
   [
     { name: "Serra da Estrela Mountains", loc: "Covilhã, Portugal", site: "https://www.google.com/maps/place/Serra+da+Estrela+Covilhã+Portugal", }, 
     { name: "Lake Song-Kol", loc: "Kochkor, Kyrgyzstan", site: "https://www.google.com/maps/place/Lake+Song-Kol+Kyrgyzstan"}, 
@@ -137,7 +141,7 @@ var places =
     { name: "Turkey Interior", loc: "Bergama, Turkey", site: "https://www.google.com/maps/place/Bergama+Turkey"}
   ] ,
 
-  Birding:
+  // Birding
   [
     { name: "Manu National Park", loc: "Manu, Peru", site: "https://www.google.com/maps/place/Manu+National+Park+Peru", }, 
     { name: "Cape May", loc: "New Jersey, USA", site: "https://www.google.com/maps/place/Cape+May+Birding+New+Jersey"}, 
@@ -151,21 +155,21 @@ var places =
     { name: "Jigme Dorji", loc: "Thimphu, Bhutan", site: "https://www.google.com/maps/place/Jigme+Dorji+Bhutan"}
   ] , 
 
-  Business:
+  // Business
   [
     { name: "London", loc: "United Kingdom", site: "https://www.google.com/maps/place/london+uk", }, 
     { name: "Sydney", loc: "Australia", site: "https://www.google.com/maps/place/sydney+australia"}, 
     { name: "Toronto", loc: "Canada", site: "https://www.google.com/maps/place/toronto+canada"},
     { name: "Hong Kong", loc: "China", site: "https://www.google.com/maps/place/hong+kong+china"},
-    { name: "Mexico loc", loc: "Mexico", site: "https://www.google.com/maps/place/Mexico+loc"},
+    { name: "Mexico City", loc: "Mexico", site: "https://www.google.com/maps/place/Mexico+loc"},
     { name: "Madrid", loc: "Spain", site: "https://www.google.com/maps/place/Madrid+Spain"}, 
     { name: "New York City", loc: "USA", site: "https://www.google.com/maps/place/new+york+loc"},
     { name: "Chicago", loc: "USA", site: "https://www.google.com/maps/place/Chicago+Illinois"},
     { name: "Washington, DC", loc: "USA", site: "https://www.google.com/maps/place/Washington+DC"},
     { name: "Rio de Janeiro", loc: "Brazil", site: "https://www.google.com/maps/place/Rio+de+Janeiro"}
-  ] ,
+  ], 
 
-  Camping:
+  // Camping
   [
     { name: "Yosemite National Park", loc: "California, USA", site: "https://www.google.com/maps/place/Yosemite+National+Park" }, 
     { name: "Boya Lake Provincial Park", loc: "British Columbia, Canada", site: "https://www.google.com/maps/place/Boya+Lake+Provincial+Park+British+Columbia+Canada"}, 
@@ -177,9 +181,9 @@ var places =
     { name: "Yellowstone National Park", loc: "Wyoming, USA", site: "https://www.google.com/maps/place/Yellowstone+National+Park"},
     { name: "Lake Myvatn", loc: "Reykjahlid, Iceland", site: "https://www.google.com/maps/place/Lake+Myvatn+Iceland"},
     { name: "Grand Canyon", loc: "Arizona, USA", site: "https://www.google.com/maps/place/Grand+Canyon"}
-  ], 
+  ],
 
-  Gambling:
+  // Gambling
   [
     { name: "Niagara Falls", loc: "Niagara Falls, USA / Canada", site: "https://www.google.com/maps/place/Niagara+Falls", }, 
     { name: "Downtown Nassau", loc: "Nassau, Bahamas", site: "https://www.google.com/maps/place/Downtown+Nassau+Bahamas"}, 
@@ -191,9 +195,9 @@ var places =
     { name: "Atlantic loc", loc: "New Jersey, USA", site: "https://www.google.com/maps/place/Atlantic+loc+New+Jersey"},
     { name: "Macau", loc: "Macau, China", site: "https://www.google.com/maps/place/Macau+China"},
     { name: "Las Vegas", loc: "Nevada, USA", site: "https://www.google.com/maps/place/Las+Vegas+Strip", photo: "https://static.panoramio.com.storage.googleapis.com/photos/large/118600455.jpg"}
-  ], 
+  ],
 
-  Golfing:
+  // Golfing
   [
     { name: "Playa Grande", loc: "Cabrera, Dominican Republic", site: "https://www.google.com/maps/place/Playa+Grande+Dominican+Republic", }, 
     { name: "Hazeltine National Golf Club", loc: "Minnesota, USA", site: "https://www.google.com/maps/place/Hazeltine+Golf+Chaska+Minnesota"}, 
@@ -207,7 +211,7 @@ var places =
     { name: "Royal Troon Golf Club", loc: "Troon, Scotland", site: "https://www.google.com/maps/place/Craigend+Rd,+Troon+KA10+6EP,+UK"}
   ],
 
-  Hiking:
+  // Hiking
   [
     { name: "Abisko National Park", loc: "Abisko, Sweden", site: "https://www.google.com/maps/place/Abisko+National+Park", }, 
     { name: "Grand Canyon", loc: "Arizona, USA", site: "https://www.google.com/maps/place/Grand+Canyon"}, 
@@ -221,7 +225,7 @@ var places =
     { name: "Mountains of the Moon", loc: "Rwenzori, Uganda", site: "https://www.google.com/maps/place/Rwenzori+Mountains+Uganda"}
   ],
 
-  Parks:
+  // Parks
   [
     { name: "Stanley Park", loc: "Vancouver, Canada", site: "https://www.google.com/maps/place/Stanley+Park+Vancouver", photo: "http://i.amz.mshcdn.com/YuIyXsRIpB_6A4N5UkBp4geMr94=/fit-in/850x850/http%3A%2F%2Fmashable.com%2Fwp-content%2Fgallery%2Fworlds-top-10-parks%2Fstanley-park.jpg" }, 
     { name: "Garden of the Gods", loc: "Colorado, USA", site: "https://www.google.com/maps/place/Garden+of+the+Gods+Colorado+Springs", photo: "http://i.amz.mshcdn.com/10r0e3Z62EnX0afR-6fUCAElc1o=/fit-in/850x850/http%3A%2F%2Fmashable.com%2Fwp-content%2Fgallery%2Fworlds-top-10-parks%2Fgarden-of-the-gods.jpg"}, 
@@ -235,7 +239,7 @@ var places =
     { name: "Jardin du Luxembourg", loc: "Paris, France", site: "https://www.google.com/maps/place/Jardin+du+Luxembourg+Paris"}
   ],
 
-  Nightlife:
+  // Nightlife
   [
     { name: "Ibiza", loc: "Spain", site: "https://www.google.com/maps/place/Ibiza+Spain", photo: "http://i2.cdn.cnn.com/cnnnext/dam/assets/140801121148-nightlife-cities-1-ibiza-horizontal-large-gallery.jpg" }, 
     { name: "Berlin", loc: "Germany", site: "https://www.google.com/maps/place/Berlin+Germany", photo: "http://i2.cdn.cnn.com/cnnnext/dam/assets/140801121303-nightlife-cities-2-berlin-horizontal-large-gallery.jpg"}, 
@@ -249,7 +253,7 @@ var places =
     { name: "Bangkok", loc: "Thailand", site: "https://www.google.com/maps/place/Sofitel+So+Bangkok", photo: "http://i2.cdn.cnn.com/cnnnext/dam/assets/140801122416-nightlife-cities-10-bangkok-horizontal-large-gallery.jpg"}
   ],
 
-  Shopping:
+  // Shopping
   [
     { name: "Tokyo", loc: "Japan", site: "https://www.google.com/maps/place/Shinjuku+Tokyo+Japan", photo: "http://i2.cdn.cnn.com/cnnnext/dam/assets/140801121148-nightlife-cities-1-ibiza-horizontal-large-gallery.jpg" }, 
     { name: "Berlin", loc: "Germany", site: "https://www.google.com/maps/place/Berlin+Germany", photo: "http://i2.cdn.cnn.com/cnnnext/dam/assets/140801121303-nightlife-cities-2-berlin-horizontal-large-gallery.jpg"}, 
@@ -263,7 +267,7 @@ var places =
     { name: "Paris", loc: "France", site: "https://www.google.com/maps/place/Champs-Élysées+Paris+France", photo: "http://i2.cdn.cnn.com/cnnnext/dam/assets/140801122416-nightlife-cities-10-bangkok-horizontal-large-gallery.jpg"}
   ],
 
-  Skiing:
+  // Skiing
   [
     { name: "Banff National Park", loc: "Alberta, Canada", site: "https://www.google.com/maps/place/Banff+National+Park+Alberta", photo: "https://media-cdn.tripadvisor.com/media/photo-s/0d/12/33/10/winter-hiking-at-johnston.jpg" }, 
     { name: "Lake Tahoe", loc: "California, USA", site: "https://www.google.com/maps/place/Lake+Tahoe+California", photo: "http://i2.cdn.cnn.com/cnnnext/dam/assets/140801121303-nightlife-cities-2-berlin-horizontal-large-gallery.jpg"}, 
@@ -277,7 +281,7 @@ var places =
     { name: "Lake Placid", loc: "New York, USA", site: "https://www.google.com/maps/place/Lake+Placid+New+York", photo: "http://www.getawaymavens.com/wp-content/uploads/2013/03/Golden-Arrow-beach.jpg"}
   ],
 
-  Surfing:
+  // Surfing
   [
     { name: "Tofino", loc: "Vancouver Island, Canada", site: "https://www.google.com/maps/place/Tofino+Vancouver+Island", photo: "http://cdn4.list25.com/wp-content/uploads/2013/01/Slide2517.jpg" }, 
     { name: "Les Cavaliers", loc: "Anglet, France", site: "https://www.google.com/maps/place/Les+Cavaliers+Anglet+France", photo: "http://cdn4.list25.com/wp-content/uploads/2013/01/Slide2417.jpg"}, 
@@ -291,8 +295,8 @@ var places =
     { name: "Sultans", loc: "North Male, Maldives", site: "https://www.google.com/maps/place/Sultans+North+Male+Maldives", photo: "http://cdn.list25.com/wp-content/uploads/2013/01/Slide1417.jpg"}
   ],
 
-  Kayaking:
-  [
+  // Kayaking
+  [ 
     { name: "Sea of Cortez", loc: "Baja California, Mexico", site: "https://www.google.com/maps/place/Baja+California+Mexico", photo: "https://www.theadventurejunkies.com/wp-content/uploads/IMG_4848-copy1.jpg?x63268" }, 
     { name: "Vancouver Island", loc: "British Columbia, Canada", site: "https://www.google.com/maps/place/Vancouver+Island+British+Columbia", photo: "https://www.theadventurejunkies.com/wp-content/uploads/6066198925_98e10135b5_b.jpg?x63268"}, 
     { name: "Amazon Rainforest", loc: "Brazil", site: "https://www.google.com/maps/place/amazon+Rainforest+brazil", photo: "https://www.theadventurejunkies.com/wp-content/uploads/5902456057_8b1068f633_b.jpg?x63268"},
@@ -304,9 +308,20 @@ var places =
     { name: "The Andes", loc: "Patagonia, Chile", site: "https://www.google.com/maps/place/Patagonia+Chile", photo: "https://adventurejunkies-theadventurejunk.netdna-ssl.com/wp-content/uploads/419690025_e1769b16a6_o.jpg"},
     { name: "Glacier Bay", loc: "Alaska, USA", site: "https://www.google.com/maps/place/Glacier+Bay+Alaska", photo: "https://www.theadventurejunkies.com/wp-content/uploads/9657169097_524f1a139b_k.jpg?x63268"}
   ],
+]
 
-}
 
+var randomPlaces = _.shuffle(places);
+
+
+console.log(randomPlaces);
+
+
+
+
+
+
+console.log(randomPlaces[1]);
 /*
 
  Array.prototype.shuffle = function(){
@@ -344,7 +359,6 @@ var places =
 */
 
 
-console.log(places.Camping[4].site);
 
 
 
