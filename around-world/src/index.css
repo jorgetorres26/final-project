@@ -5,3 +5,13 @@ body {
 }
 
 #mapid { height: 180px; }
+
+.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 70%;
+      margin: auto;
+  }
+.item img{
+  width: 460;
+  height: 345;
+}
