@@ -58,12 +58,13 @@ class Quiz extends React.Component {
     }
     this.handleClick = this.handleClick.bind(this);
   }
-  handleClick() {
+  handleClick(event) {
     var i = this.state.answerNum;
     i++;
     this.setState({answerNum: i});
     var j = this.state.answerArray;
-    j.push(document.getElementsByClassName("answerButton"));
+    //this isn't working - Sarah
+    j.push(document.getElementById(event));
     console.log(this.state);
 
   }
@@ -75,10 +76,10 @@ class Quiz extends React.Component {
         <Image className = "image"src = "http://images.mentalfloss.com/sites/default/files/styles/article_640x430/public/166142726.jpg" rounded></Image>
         <p className="questionText">What is your budget?</p>
         <div className="answers">
-          <Button className="answerButton" onClick={this.handleClick}>$ Almost Free</Button>
-          <Button className="answerButton" onClick={this.handleClick}>$$ Little Money</Button>
-          <Button className="answerButton" onClick={this.handleClick}>$$$ Some Money</Button>
-          <Button className="answerButton" onClick={this.handleClick}>$$$$ No Budget</Button>
+          <Button className="answerButton" id = "$" onClick={this.handleClick}>$ Almost Free</Button>
+          <Button className="answerButton" id = "$$" onClick={this.handleClick}>$$ Little Money</Button>
+          <Button className="answerButton" id = "$$$"onClick={this.handleClick}>$$$ Some Money</Button>
+          <Button className="answerButton" id = "" onClick={this.handleClick}>$$$$ No Budget</Button>
           </div>
       </div>
     );
@@ -144,9 +145,12 @@ class Quiz extends React.Component {
     );
     case 6: 
     //this should be the results
+    
       return (
       <div id="quizContainer">
-        <p> THIS IS WHERE THE RESULTS GO</p>
+        <Image className = "image" src = "https://cdn.gobankingrates.com/wp-content/uploads/2015/05/las_vegas_strip.jpg" rounded></Image>
+        <h3> RESULTS: </h3>
+        <p className = "resultsInfo">Whether you’re a high roller or a low-key lounger, Las Vegas has something to suit your vacation taste. Sample fare from top chefs and cornucopian buffets, try your luck at one of the world’s premier casinos, or take in a spectacular show. Just wandering the Strip is enough to get your heart pumping. Once you’ve had enough of the razzle-dazzle, wave hello to the toothy sea life at the Mandalay Bay Shark Reef, hike Red Rock Canyon, or visit the Neon Museum, where old signs take on new life.</p>
       </div>
     );
     }

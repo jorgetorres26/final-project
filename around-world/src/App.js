@@ -37,7 +37,7 @@ class NavBar extends React.Component {
 
   render() {
     return (
-      <Nav className="navbar navbar-light bg-faded">
+      <Nav className="navbar navbar-light bg-faded" role = "navigation">
         <ul className="nav navbar-nav">
           <li className="nav-item">
             <Link to="/explore" activeClassName="activeLink" className="nav-link">Explore</Link>
@@ -60,7 +60,7 @@ class NavBar extends React.Component {
 class Footer extends React.Component {
   render() {
     return (
-      <div id="mapPic">
+      <div id="mapPic" role = "footer">
         
       <div className="container">
 
@@ -114,7 +114,7 @@ class Footer extends React.Component {
 class Map extends React.Component {
   render() {
     return (
-      <div id="mapPic">
+      <div id="mapPic" role = "interactive map">
 
       </div>
     )}
