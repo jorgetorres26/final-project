@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, hashHistory } from 'react-router';
 import './A_D_E.css'
 import _ from 'lodash';
+import $ from "jquery";
 
 /*
 var places = 
@@ -414,41 +415,67 @@ var kayaking = [
     { name: "Glacier Bay", loc: "Alaska, USA", site: "https://www.google.com/maps/place/Glacier+Bay+Alaska", photo: "https://www.theadventurejunkies.com/wp-content/uploads/9657169097_524f1a139b_k.jpg?x63268"}
   ]
 
+$('[data-toggle=offcanvas]').click(function() {
+  $('.row-offcanvas-left').toggleClass('active');
+});
+
+$('[data-toggle=offcanvasright]').click(function() {
+  $('.row-offcanvas-right').toggleClass('active');
+});
+
 class Discover extends React.Component {
   render() {
     return (
       <div>
         <h2> Discover </h2>
-
-        
-        {/*
-        <div className="container">
-          <div className="col-sm-2">
-            <nav className="nav-sidebar">
-            <ul className="nav tabs">
-                  <li className="active"><a href="#Skiing" data-toggle="tab">Lorem ipsum</a></li>
-                  <li className=""><a href="#tab2" data-toggle="tab">Dolor asit amet</a></li>
-                  <li className=""><a href="#tab3" data-toggle="tab">Stet clita</a></li>                               
-            </ul>
-            </nav>
-          </div>
-        </div>
-        */ }
-        <Arts/>
-        <Beaches />
-        <Birding/>
-        <Business/>
-        <Camping/>
-        <Cycling/>
-        <Gambling/>
-        <Golfing/>
-        <Hiking/>
-        <Kayaking/>
-        <Nightlife/>
-        <Parks/>
-        <Shopping/>
-        <Skiing/>
-        <Surfing/>
+          <div className="container">
+                <div className="row row-offcanvas row-offcanvas-left">
+                    <div className="row-offcanvas row-offcanvas-right">
+                      <div className="col-xs-6 col-sm-2 sidebar-offcanvas" id="sidebarLeft" role="navigation">
+                        <p className="visible-xs">
+                          <button className="btn btn-primary btn-xs" type="button" data-toggle="offcanvas"><i className="glyphicon glyphicon-chevron-left"></i></button>
+                        </p>
+                        <div className="well sidebar-nav">
+                          <ul className="nav">
+                            <li>Interests</li>
+                            <li><a href="#discover/arts">Arts</a></li>
+                            <li><a href="#discover/beaches">Beaches</a></li>
+                            <li><a href="#discover/birding">Birding</a></li>
+                            <li><a href="#discover/business">Business</a></li>
+                            <li><a href="#discover/camping">Camping</a></li>
+                            <li><a href="#discover/cycling">Cycling</a></li>
+                            <li><a href="#discover/gambling">Gambling</a></li>
+                            <li><a href="#discover/golfing">Golfing</a></li>
+                            <li><a href="#discover/hiking">Hiking</a></li>
+                            <li><a href="#discover/kayaking">Kayaking</a></li>
+                            <li><a href="#discover/nightlife">Nightlife</a></li>
+                            <li><a href="#discover/parks">Parks</a></li>
+                            <li><a href="#discover/shopping">Shopping</a></li>
+                            <li><a href="#discover/skiing">Skiing</a></li>
+                            <li><a href="#discover/surfing">Surfing</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div className="col-xs-12 col-sm-10">
+                          <a name="discover/arts"><Arts/></a>
+                          <a name="discover/beaches"><Beaches /></a>
+                          <a name="discover/birding"><Birding/></a>
+                          <a name="discover/business"><Business/></a>
+                          <a name="discover/camping"><Camping/></a>
+                          <a name="discover/cycling"><Cycling/></a>
+                          <a name="discover/gambling"><Gambling/></a>
+                          <a name="discover/golfing"><Golfing/></a>
+                          <a name="discover/hiking"><Hiking/></a>
+                          <a name="discover/kayaking"><Kayaking/></a>
+                          <a name="discover/nightlife"><Nightlife/></a>
+                          <a name="discover/parks"><Parks/></a>
+                          <a name="discover/shopping"><Shopping/></a>
+                          <a name="discover/skiing"><Skiing/></a>
+                          <a name="discover/surfing"><Surfing/></a>
+                      </div>                 
+                  </div>
+                </div>       
+              </div>
       </div>
     )
   }
