@@ -6,15 +6,6 @@
     align-content: center;
 }
 
-#mapid {
-    height: 400px; 
-}
-
-
-.card-img-top{
-    height: 175px;
-    width: 290px;
-}
 
 .nav-sidebar { 
     width: 100%;
@@ -127,7 +118,7 @@ footer {
 }
 
 /*
- * Off Canvas
+ * discover sidebar Jorge
  * --------------------------------------------------
  */
 @media screen and (max-width: 768px) {
@@ -164,6 +155,24 @@ footer {
   }
 }
 
+#mapid {
+    height: 400px; 
+}
 
 
+.card-img-top{
+    height: 175px;
+    width: 290px;
+}
 
+
+/*
+ * About Us
+ * --------------------------------------------------
+ */
+
+.img-circle{
+    height: 100px;
+    width: 100px;
+
+}
