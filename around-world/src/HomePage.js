@@ -3,6 +3,8 @@ import { Link, hashHistory } from 'react-router';
 import { Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
 import { Carousel, Button } from 'react-bootstrap';
 import './index.css';
+import {arts} from './Discover.js'
+
 
 
 
@@ -64,7 +66,7 @@ class Homepage extends React.Component {
             </div>
 
             <div className="item">
-              <img src="http://www.animated-gifs.eu/category_cartoons/avatars-100x100-cartoons-spongebob/0038.gif" alt="location" />
+              <img src={arts[0].photo} alt="location" />
               <div className="carousel-caption">
                 <h3>Location</h3>
                 <p>The description of the perticular location should be here.</p>

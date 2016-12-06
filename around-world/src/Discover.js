@@ -1091,6 +1091,10 @@ class Kayaking extends React.Component {
 }
 
 
+
+
+
+
 class Shopping extends React.Component {
   constructor(props) {
     super(props);
@@ -1142,6 +1146,7 @@ class Shopping extends React.Component {
     );
   }
 }
+
 
 class Skiing extends React.Component {
   constructor(props) {
@@ -1247,4 +1252,7 @@ class Surfing extends React.Component {
   }
 }
 
+export {arts};
 export default Discover;
+
+
