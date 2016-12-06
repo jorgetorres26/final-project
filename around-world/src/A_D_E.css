@@ -1,3 +1,5 @@
+
+
 #contentContainer{
     min-height: 400px;
     max-height: 700px;
@@ -72,7 +74,9 @@ h2{color:#0b56a8;}
 
 
 
-
+/*
+For the Adventure Page & Quiz - Sarah ----------------------
+*/
 
 .questionText{
     font-size: x-large;
@@ -110,6 +114,9 @@ Button.answerButton {
     font-weight: 300;
     font-size: 25px;
 }
+/*
+----------------------------------------
+*/
 
 body {
   padding-top: 70px;

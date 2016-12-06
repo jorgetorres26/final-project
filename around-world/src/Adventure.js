@@ -38,7 +38,7 @@ class Adventure extends React.Component {
   else{
     return(
       <div>
-      <h2> This is the Adventure Quiz</h2>
+      <h2> Adventure </h2>
       <div id="contentContainer">
       <Quiz/>
       </div>
