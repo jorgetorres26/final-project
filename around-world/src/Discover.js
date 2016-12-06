@@ -735,3 +735,4 @@ class Kayaking extends React.Component {
 
 
 export default Discover;
+export {arts};
