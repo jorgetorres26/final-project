@@ -16,7 +16,7 @@ class Homepage extends React.Component {
     return (
       <div >
         <h2>This is the home page</h2>
-      
+       
         <div id="myCarousel" className="carousel slide" data-ride="carousel">
 
           <ol className="carousel-indicators">
