@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link, hashHistory } from 'react-router';
 import {Panel, Form, FormControl, InputGroup, Button, Glyphicon, Image} from 'react-bootstrap';
-import './Explore.css';
 import './A_D_E.css';
 import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
 import Controller from './Controller';
