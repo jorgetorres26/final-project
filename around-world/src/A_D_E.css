@@ -158,6 +158,7 @@ footer {
 #mapid {
     height: 400px; 
 }
+<<<<<<< HEAD
 
 
 .card-img-top{
@@ -175,4 +176,23 @@ footer {
     height: 100px;
     width: 100px;
 
+=======
+
+
+.card-img-top{
+    height: 175px;
+    width: 290px;
+}
+
+
+/*
+ * About Us
+ * --------------------------------------------------
+ */
+
+.img-circle{
+    height: 100px;
+    width: 100px;
+
+>>>>>>> 68b8234d11680392366552553f41da1b3f423692
 }
