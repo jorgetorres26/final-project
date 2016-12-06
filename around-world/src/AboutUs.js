@@ -5,10 +5,6 @@ import HomePage from './HomePage';
 import { Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
 import { Link, hashHistory } from 'react-router';
 
-
-
-
-
 class AboutUs extends React.Component {
   render() {
     return (

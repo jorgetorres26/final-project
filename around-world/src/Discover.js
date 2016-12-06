@@ -398,7 +398,7 @@ var gambling = [
     { name: "Reno", loc: "Nevada, USA", site: "https://www.google.com/maps/place/Casinos+in+Reno+Nevada"},
     { name: "Monte Carlo", loc: "Monte Carlo, Monaco", site: "https://www.google.com/maps/place/Casinos+In+Monte+carlo+Monaco"}, 
     { name: "Southeast Connecticut", loc: "Connecticut, USA", site: "https://www.google.com/maps/place/1+Mohegan+Sun+Blvd,+Uncasville,+CT+06382"},
-    { name: "Atlantic loc", loc: "New Jersey, USA", site: "https://www.google.com/maps/place/Atlantic+loc+New+Jersey"},
+    { name: "Atlantic City", loc: "New Jersey, USA", site: "https://www.google.com/maps/place/Atlantic+City+New+Jersey"},
     { name: "Macau", loc: "Macau, China", site: "https://www.google.com/maps/place/Macau+China"},
     { name: "Las Vegas", loc: "Nevada, USA", site: "https://www.google.com/maps/place/Las+Vegas+Strip", photo: "https://static.panoramio.com.storage.googleapis.com/photos/large/118600455.jpg"}
   ]
@@ -516,8 +516,17 @@ class Discover extends React.Component {
         <h2> Discover </h2>
         <Arts/>
         <Beaches />
+        <Birding/>
+        <Business/>
+        <Camping/>
         <Cycling/>
+        <Gambling/>
+        <Golfing/>
+        <Hiking/>
         <Kayaking/>
+        <Nightlife/>
+        <Parks/>
+        <Shopping/>
       </div>
     )
   }
@@ -679,6 +688,426 @@ class Cycling extends React.Component {
 }
 
 
+class Birding extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { 'name': [],
+                   'loc': [], 
+                   'site': [],
+                   'photo' : []
+                 };
+    
+  }
+  componentWillMount(){
+    var randomBirding = _.shuffle(birding);
+      this.setState({ 
+          'name': [randomBirding[0].name, randomBirding[1].name, randomBirding[2].name],
+          'loc': [randomBirding[0].loc, randomBirding[1].loc, randomBirding[2].loc],
+          'site': [randomBirding[0].site, randomBirding[1].site, randomBirding[2].site],
+          'photo': [randomBirding[0].photo, randomBirding[1].photo, randomBirding[2].photo]
+      });
+  }
+  render() {
+    
+    return (
+      <div>
+        <h3> Birding </h3>
+        <div className="row">
+          <div className="col-md-4">
+          <a href = {this.state.site[0]}><img className="card-img-top" src= {this.state.photo[0]} alt="Card image cap"/></a>
+            <div className="card card-block">
+              <h3 className="card-title">{this.state.name[0]}</h3> 
+              <p className="card-text">{this.state.loc[0]}</p>
+            </div>
+          </div>
+          <div className="col-md-4">
+          <a href = {this.state.site[1]}><img className="card-img-top" src={this.state.photo[1]} alt="Card image cap"/></a>
+            <div className="card card-block">
+              <h3 className="card-title">{this.state.name[1]}</h3> 
+              <p className="card-text">{this.state.loc[1]}</p>
+            </div>
+          </div>
+          <div className="col-md-4">
+          <a href = {this.state.site[2]}><img className="card-img-top" src={this.state.photo[2]} alt="Card image cap"/></a>
+            <div className="card card-block">
+              <h3 className="card-title">{this.state.name[2]}</h3> 
+              <p className="card-text">{this.state.loc[2]}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
+
+
+class Business extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { 'name': [],
+                   'loc': [], 
+                   'site': [],
+                   'photo' : []
+                 };
+    
+  }
+  componentWillMount(){
+    var randomBusiness = _.shuffle(business);
+      this.setState({ 
+          'name': [randomBusiness[0].name, randomBusiness[1].name, randomBusiness[2].name],
+          'loc': [randomBusiness[0].loc, randomBusiness[1].loc, randomBusiness[2].loc],
+          'site': [randomBusiness[0].site, randomBusiness[1].site, randomBusiness[2].site],
+          'photo': [randomBusiness[0].photo, randomBusiness[1].photo, randomBusiness[2].photo]
+      });
+  }
+  render() {
+    
+    return (
+      <div>
+        <h3> Business </h3>
+        <div className="row">
+          <div className="col-md-4">
+          <a href = {this.state.site[0]}><img className="card-img-top" src= {this.state.photo[0]} alt="Card image cap"/></a>
+            <div className="card card-block">
+              <h3 className="card-title">{this.state.name[0]}</h3> 
+              <p className="card-text">{this.state.loc[0]}</p>
+            </div>
+          </div>
+          <div className="col-md-4">
+          <a href = {this.state.site[1]}><img className="card-img-top" src={this.state.photo[1]} alt="Card image cap"/></a>
+            <div className="card card-block">
+              <h3 className="card-title">{this.state.name[1]}</h3> 
+              <p className="card-text">{this.state.loc[1]}</p>
+            </div>
+          </div>
+          <div className="col-md-4">
+          <a href = {this.state.site[2]}><img className="card-img-top" src={this.state.photo[2]} alt="Card image cap"/></a>
+            <div className="card card-block">
+              <h3 className="card-title">{this.state.name[2]}</h3> 
+              <p className="card-text">{this.state.loc[2]}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
+
+class Camping extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { 'name': [],
+                   'loc': [], 
+                   'site': [],
+                   'photo' : []
+                 };
+    
+  }
+  componentWillMount(){
+    var randomCamping = _.shuffle(camping);
+      this.setState({ 
+          'name': [randomCamping[0].name, randomCamping[1].name, randomCamping[2].name],
+          'loc': [randomCamping[0].loc, randomCamping[1].loc, randomCamping[2].loc],
+          'site': [randomCamping[0].site, randomCamping[1].site, randomCamping[2].site],
+          'photo': [randomCamping[0].photo, randomCamping[1].photo, randomCamping[2].photo]
+      });
+  }
+  render() {
+    
+    return (
+      <div>
+        <h3> Camping </h3>
+        <div className="row">
+          <div className="col-md-4">
+          <a href = {this.state.site[0]}><img className="card-img-top" src= {this.state.photo[0]} alt="Card image cap"/></a>
+            <div className="card card-block">
+              <h3 className="card-title">{this.state.name[0]}</h3> 
+              <p className="card-text">{this.state.loc[0]}</p>
+            </div>
+          </div>
+          <div className="col-md-4">
+          <a href = {this.state.site[1]}><img className="card-img-top" src={this.state.photo[1]} alt="Card image cap"/></a>
+            <div className="card card-block">
+              <h3 className="card-title">{this.state.name[1]}</h3> 
+              <p className="card-text">{this.state.loc[1]}</p>
+            </div>
+          </div>
+          <div className="col-md-4">
+          <a href = {this.state.site[2]}><img className="card-img-top" src={this.state.photo[2]} alt="Card image cap"/></a>
+            <div className="card card-block">
+              <h3 className="card-title">{this.state.name[2]}</h3> 
+              <p className="card-text">{this.state.loc[2]}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
+
+
+class Gambling extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { 'name': [],
+                   'loc': [], 
+                   'site': [],
+                   'photo' : []
+                 };
+    
+  }
+  componentWillMount(){
+    var randomGambling = _.shuffle(gambling);
+      this.setState({ 
+          'name': [randomGambling[0].name, randomGambling[1].name, randomGambling[2].name],
+          'loc': [randomGambling[0].loc, randomGambling[1].loc, randomGambling[2].loc],
+          'site': [randomGambling[0].site, randomGambling[1].site, randomGambling[2].site],
+          'photo': [randomGambling[0].photo, randomGambling[1].photo, randomGambling[2].photo]
+      });
+  }
+  render() {
+    
+    return (
+      <div>
+        <h3> Gambling </h3>
+        <div className="row">
+          <div className="col-md-4">
+          <a href = {this.state.site[0]}><img className="card-img-top" src= {this.state.photo[0]} alt="Card image cap"/></a>
+            <div className="card card-block">
+              <h3 className="card-title">{this.state.name[0]}</h3> 
+              <p className="card-text">{this.state.loc[0]}</p>
+            </div>
+          </div>
+          <div className="col-md-4">
+          <a href = {this.state.site[1]}><img className="card-img-top" src={this.state.photo[1]} alt="Card image cap"/></a>
+            <div className="card card-block">
+              <h3 className="card-title">{this.state.name[1]}</h3> 
+              <p className="card-text">{this.state.loc[1]}</p>
+            </div>
+          </div>
+          <div className="col-md-4">
+          <a href = {this.state.site[2]}><img className="card-img-top" src={this.state.photo[2]} alt="Card image cap"/></a>
+            <div className="card card-block">
+              <h3 className="card-title">{this.state.name[2]}</h3> 
+              <p className="card-text">{this.state.loc[2]}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
+
+
+class Golfing extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { 'name': [],
+                   'loc': [], 
+                   'site': [],
+                   'photo' : []
+                 };
+    
+  }
+  componentWillMount(){
+    var randomGambling = _.shuffle(golfing);
+      this.setState({ 
+          'name': [randomGambling[0].name, randomGambling[1].name, randomGambling[2].name],
+          'loc': [randomGambling[0].loc, randomGambling[1].loc, randomGambling[2].loc],
+          'site': [randomGambling[0].site, randomGambling[1].site, randomGambling[2].site],
+          'photo': [randomGambling[0].photo, randomGambling[1].photo, randomGambling[2].photo]
+      });
+  }
+  render() {
+    
+    return (
+      <div>
+        <h3> Golfing </h3>
+        <div className="row">
+          <div className="col-md-4">
+          <a href = {this.state.site[0]}><img className="card-img-top" src= {this.state.photo[0]} alt="Card image cap"/></a>
+            <div className="card card-block">
+              <h3 className="card-title">{this.state.name[0]}</h3> 
+              <p className="card-text">{this.state.loc[0]}</p>
+            </div>
+          </div>
+          <div className="col-md-4">
+          <a href = {this.state.site[1]}><img className="card-img-top" src={this.state.photo[1]} alt="Card image cap"/></a>
+            <div className="card card-block">
+              <h3 className="card-title">{this.state.name[1]}</h3> 
+              <p className="card-text">{this.state.loc[1]}</p>
+            </div>
+          </div>
+          <div className="col-md-4">
+          <a href = {this.state.site[2]}><img className="card-img-top" src={this.state.photo[2]} alt="Card image cap"/></a>
+            <div className="card card-block">
+              <h3 className="card-title">{this.state.name[2]}</h3> 
+              <p className="card-text">{this.state.loc[2]}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
+
+
+class Hiking extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { 'name': [],
+                   'loc': [], 
+                   'site': [],
+                   'photo' : []
+                 };
+    
+  }
+  componentWillMount(){
+    var randomGambling = _.shuffle(hiking);
+      this.setState({ 
+          'name': [randomGambling[0].name, randomGambling[1].name, randomGambling[2].name],
+          'loc': [randomGambling[0].loc, randomGambling[1].loc, randomGambling[2].loc],
+          'site': [randomGambling[0].site, randomGambling[1].site, randomGambling[2].site],
+          'photo': [randomGambling[0].photo, randomGambling[1].photo, randomGambling[2].photo]
+      });
+  }
+  render() {
+    
+    return (
+      <div>
+        <h3> Hiking </h3>
+        <div className="row">
+          <div className="col-md-4">
+          <a href = {this.state.site[0]}><img className="card-img-top" src= {this.state.photo[0]} alt="Card image cap"/></a>
+            <div className="card card-block">
+              <h3 className="card-title">{this.state.name[0]}</h3> 
+              <p className="card-text">{this.state.loc[0]}</p>
+            </div>
+          </div>
+          <div className="col-md-4">
+          <a href = {this.state.site[1]}><img className="card-img-top" src={this.state.photo[1]} alt="Card image cap"/></a>
+            <div className="card card-block">
+              <h3 className="card-title">{this.state.name[1]}</h3> 
+              <p className="card-text">{this.state.loc[1]}</p>
+            </div>
+          </div>
+          <div className="col-md-4">
+          <a href = {this.state.site[2]}><img className="card-img-top" src={this.state.photo[2]} alt="Card image cap"/></a>
+            <div className="card card-block">
+              <h3 className="card-title">{this.state.name[2]}</h3> 
+              <p className="card-text">{this.state.loc[2]}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
+
+class Parks extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { 'name': [],
+                   'loc': [], 
+                   'site': [],
+                   'photo' : []
+                 };
+    
+  }
+  componentWillMount(){
+    var randomGambling = _.shuffle(parks);
+      this.setState({ 
+          'name': [randomGambling[0].name, randomGambling[1].name, randomGambling[2].name],
+          'loc': [randomGambling[0].loc, randomGambling[1].loc, randomGambling[2].loc],
+          'site': [randomGambling[0].site, randomGambling[1].site, randomGambling[2].site],
+          'photo': [randomGambling[0].photo, randomGambling[1].photo, randomGambling[2].photo]
+      });
+  }
+  render() {
+    
+    return (
+      <div>
+        <h3> Parks </h3>
+        <div className="row">
+          <div className="col-md-4">
+          <a href = {this.state.site[0]}><img className="card-img-top" src= {this.state.photo[0]} alt="Card image cap"/></a>
+            <div className="card card-block">
+              <h3 className="card-title">{this.state.name[0]}</h3> 
+              <p className="card-text">{this.state.loc[0]}</p>
+            </div>
+          </div>
+          <div className="col-md-4">
+          <a href = {this.state.site[1]}><img className="card-img-top" src={this.state.photo[1]} alt="Card image cap"/></a>
+            <div className="card card-block">
+              <h3 className="card-title">{this.state.name[1]}</h3> 
+              <p className="card-text">{this.state.loc[1]}</p>
+            </div>
+          </div>
+          <div className="col-md-4">
+          <a href = {this.state.site[2]}><img className="card-img-top" src={this.state.photo[2]} alt="Card image cap"/></a>
+            <div className="card card-block">
+              <h3 className="card-title">{this.state.name[2]}</h3> 
+              <p className="card-text">{this.state.loc[2]}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
+
+
+class Nightlife extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { 'name': [],
+                   'loc': [], 
+                   'site': [],
+                   'photo' : []
+                 };
+    
+  }
+  componentWillMount(){
+    var randomGambling = _.shuffle(nightlife);
+      this.setState({ 
+          'name': [randomGambling[0].name, randomGambling[1].name, randomGambling[2].name],
+          'loc': [randomGambling[0].loc, randomGambling[1].loc, randomGambling[2].loc],
+          'site': [randomGambling[0].site, randomGambling[1].site, randomGambling[2].site],
+          'photo': [randomGambling[0].photo, randomGambling[1].photo, randomGambling[2].photo]
+      });
+  }
+  render() {
+    
+    return (
+      <div>
+        <h3> Nightlife </h3>
+        <div className="row">
+          <div className="col-md-4">
+          <a href = {this.state.site[0]}><img className="card-img-top" src= {this.state.photo[0]} alt="Card image cap"/></a>
+            <div className="card card-block">
+              <h3 className="card-title">{this.state.name[0]}</h3> 
+              <p className="card-text">{this.state.loc[0]}</p>
+            </div>
+          </div>
+          <div className="col-md-4">
+          <a href = {this.state.site[1]}><img className="card-img-top" src={this.state.photo[1]} alt="Card image cap"/></a>
+            <div className="card card-block">
+              <h3 className="card-title">{this.state.name[1]}</h3> 
+              <p className="card-text">{this.state.loc[1]}</p>
+            </div>
+          </div>
+          <div className="col-md-4">
+          <a href = {this.state.site[2]}><img className="card-img-top" src={this.state.photo[2]} alt="Card image cap"/></a>
+            <div className="card card-block">
+              <h3 className="card-title">{this.state.name[2]}</h3> 
+              <p className="card-text">{this.state.loc[2]}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
 
 
 class Kayaking extends React.Component {
@@ -705,6 +1134,59 @@ class Kayaking extends React.Component {
     return (
       <div>
         <h3> Kayaking </h3>
+        <div className="row">
+          <div className="col-md-4">
+          <a href = {this.state.site[0]}><img className="card-img-top" src= {this.state.photo[0]} alt="Card image cap"/></a>
+            <div className="card card-block">
+              <h3 className="card-title">{this.state.name[0]}</h3> 
+              <p className="card-text">{this.state.loc[0]}</p>
+            </div>
+          </div>
+          <div className="col-md-4">
+          <a href = {this.state.site[1]}><img className="card-img-top" src={this.state.photo[1]} alt="Card image cap"/></a>
+            <div className="card card-block">
+              <h3 className="card-title">{this.state.name[1]}</h3> 
+              <p className="card-text">{this.state.loc[1]}</p>
+            </div>
+          </div>
+          <div className="col-md-4">
+          <a href = {this.state.site[2]}><img className="card-img-top" src={this.state.photo[2]} alt="Card image cap"/></a>
+            <div className="card card-block">
+              <h3 className="card-title">{this.state.name[2]}</h3> 
+              <p className="card-text">{this.state.loc[2]}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
+
+
+class Shopping extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { 'name': [],
+                   'loc': [], 
+                   'site': [],
+                   'photo' : []
+                 };
+    
+  }
+  componentWillMount(){
+    var randomGambling = _.shuffle(shopping);
+      this.setState({ 
+          'name': [randomGambling[0].name, randomGambling[1].name, randomGambling[2].name],
+          'loc': [randomGambling[0].loc, randomGambling[1].loc, randomGambling[2].loc],
+          'site': [randomGambling[0].site, randomGambling[1].site, randomGambling[2].site],
+          'photo': [randomGambling[0].photo, randomGambling[1].photo, randomGambling[2].photo]
+      });
+  }
+  render() {
+    
+    return (
+      <div>
+        <h3> Nightlife </h3>
         <div className="row">
           <div className="col-md-4">
           <a href = {this.state.site[0]}><img className="card-img-top" src= {this.state.photo[0]} alt="Card image cap"/></a>
