@@ -120,7 +120,7 @@ footer {
 }
 
 /*
- * Off Canvas
+ * discover sidebar
  * --------------------------------------------------
  */
 @media screen and (max-width: 768px) {
@@ -156,7 +156,5 @@ footer {
     margin-left: 10px;
   }
 }
-
-
 
 
