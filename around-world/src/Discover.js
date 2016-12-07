@@ -611,6 +611,7 @@ class Gambling extends React.Component {
     
     return (
       <div>
+        <img class="rig-img" src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=CoQBdwAAAC62fcYUOfMGpPzV-iAktQZAa2pVPyFxDUFGqSl6wU9skczZXBjcTrqDxmn9enqBBdPdsQ_SQJYN3PbPRiMM_UAsy1KfHT8A6RA1h1HcDYPLctsjdFJdAPvQXS1wS-ZjGwuL_5wdoOPRQbj1ZFm8CCPohaoSWuK7-Vv7nZErAzrREhD1mLP4Yt2MWSnNJL6PdfBYGhTUs6ih7-mMRrRIDUTu0TfMgexsTQ&key=AIzaSyDPqNFY-8y3iThJr9cy5GxZO18Qo7iCmmQ" alt="Pic From Google"/>
         <h3> Gambling </h3>
         <div className="row">
           <div className="col-md-4">

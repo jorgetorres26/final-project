@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, hashHistory } from 'react-router';
-import {Panel, Form, FormControl, InputGroup, Button, Glyphicon, Image} from 'react-bootstrap';
+import {Form, FormControl, InputGroup, Button} from 'react-bootstrap';
 import './A_D_E.css';
 import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
 import Controller from './Controller';
@@ -21,22 +21,18 @@ class Explore extends React.Component {
 
   fetchData(searchTerm) {
     var thisComponent = this;
-    Controller.searchTMDB(searchTerm)
+    Controller.searchMap(searchTerm)
       .then(function(data) {
-        var results = data.results;
-        console.log(results[0].geometry.location);
         thisComponent.setState({lat:data.results[0].geometry.location.lat});
         thisComponent.setState({lng:data.results[0].geometry.location.lng});
         thisComponent.setState({markers:data.results});
-        console.log(data);
-        ;
       })
-      .catch( (err) => this.setState({markers:[]}));
-        
+      .catch( (err) => this.setState({markers:[]}));    
   }
+  
   render() {
+    console.log(this.state);
     var position = [this.state.lat, this.state.lng];
-    {console.log(this.state)}
     return (
       <div >
       <h2>What do you want to do today?</h2>
@@ -77,7 +73,6 @@ class MarkRow extends React.Component {
   
   render() {
     var position = [this.props.loc.lat, this.props.loc.lng];
-    console.log(this.props.mark);
     return (
       <div>
         <Marker position={position}>

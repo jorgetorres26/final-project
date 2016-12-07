@@ -4,7 +4,7 @@ import { Button, Image } from 'react-bootstrap';
 import { Link, hashHistory } from 'react-router';
 import './A_D_E.css';
 import _ from 'lodash';
-import Controller from './Controller';
+//import Controller from './Controller';
 
 // This is Page is made by me :) - Sarah
 
@@ -12,16 +12,38 @@ class Adventure extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      quizStarted: false
+      quizStarted: false,
+      cool: [],
+      test: '1'
     } 
     this.quizStart = this.quizStart.bind(this);
+    //this.fetchResult = this.fetchResult.bind(this);
   }
   //will change the status of the quizStarted when the start button is clicked
-   quizStart() {
-      this.setState({quizStarted: true}); 
-    }
+  quizStart() {
+    this.setState({quizStarted: true}); 
+  }
 // Show start button for quiz. Once clicked, quiz starts and start button is hidden
+/*
+  fetchResult(searchTerm){
+    var thisComponent = this;
+    //var longString = ""
+    var ArrayofTags = "bellevue";
+    //console.log(ArrayofTags);
+    //console.log(searchTerm);
+    //ArrayofTags.forEach(function(element) {
+      //longString = " "+element;
+    //}, this);
+    Controller.searchMap(ArrayofTags)
+      .then(function(data){
+        //return data.results;
+        thisComponent.setState({cool:data.results});
+        thisComponent.setState({test:data.results[0].geometry.location.lat});
+        console.log(this.state.result);
+      
+    }).catch( (err) => this.setState({result:[]}));
 
+  }*/
   render() {
      console.log(this.state);
     if(this.state.quizStarted == false){
@@ -40,7 +62,7 @@ class Adventure extends React.Component {
       <div>
       <h2> Adventure </h2>
       <div id="contentContainer">
-      <Quiz/>
+      <Quiz /*resultFunction={this.fetchResult}*/ />
       </div>
       </div>
     );
@@ -55,11 +77,12 @@ class Quiz extends React.Component {
     super(props);
     this.state ={
       answerNum:0,
-      answerArray: [],
-      result: []
-    }
+      answerArray: []
+      //result: []
+    };
     this.handleClick = this.handleClick.bind(this);
-    this.fetchData = this.fetchData.bind(this);
+    //this.fetchData = this.fetchData.bind(this);
+    //this.handleResult = this.handleResult.bind(this);
   }
   handleClick(answer) {
     var i = this.state.answerNum;
@@ -69,20 +92,28 @@ class Quiz extends React.Component {
     j.push(answer);
     console.log(this.state);
   }
-  fetchData(ArrayofTags){
-    var thisComp = this;
-    var longString = ""
-    ArrayofTags.forEach(function(element) {
-      longString = " "+element;
-    }, this);
-    Controller.searchTMDB(longString)
+
+  handleResult(event) {
+    this.props.resultFunction(this.state.answerArray);
+    console.log(this.state.answerArray);
+  }
+  /*fetchData(){
+    var thisComponent = this;
+    //var longString = ""
+    var ArrayofTags = "seattle";
+    console.log(ArrayofTags);
+    //ArrayofTags.forEach(function(element) {
+      //longString = " "+element;
+    //}, this);
+    Controller.searchMap(ArrayofTags)
     .then(function(data){
-        this.setState({result: [data.results[0]]})
+        //return data.results;
+        thisComponent.setState({result: data.results[0]});
         console.log(this.state.result);
       
-    });
+    }).catch( (err) => this.setState({results:[]}));
 
-  }
+  }*/
   render() {
     var page = this.state.answerNum;
     switch(page){
@@ -150,7 +181,7 @@ class Quiz extends React.Component {
       <div id="quizContainer">
         <Image className = "image"src = "http://images.r.cruisecritic.com/features/2016/03/10-lux-cruise-main.jpg" rounded></Image>
         <p className="questionText">How would you like to travel?</p>
-        <div className="answers">
+        <div className="answers" onClick={this.fetchData}>
           <Button className="answerButton" onClick={(e) => { this.handleClick('') }}>Car or Bus</Button>
           <Button className="answerButton" onClick={(e) => { this.handleClick('Cruise') }}>Boat</Button>
           <Button className="answerButton" onClick={(e) => { this.handleClick('') }}>Plane</Button>
@@ -160,8 +191,12 @@ class Quiz extends React.Component {
     );
     case 6: 
     //this should be the results
+      //this.fetchData("seattle");
+      //console.log(this.state.answerArray);
+      //console.log(this.state.result);
       return (
       <div id="quizContainer">
+      {/*<Button onClick={this.handleResult}>Show Results</Button>*/}
         <Image className = "image" src = "https://cdn.gobankingrates.com/wp-content/uploads/2015/05/las_vegas_strip.jpg" rounded></Image>
         <h3> RESULTS: </h3>
         <p className = "resultsInfo"></p>

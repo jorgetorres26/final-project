@@ -21,10 +21,6 @@ ReactDOM.render(
     <Route path="about" component={AboutUs}/>
     </Route>
   </Router>,
-  
-
-
-  
   document.getElementById('root')
 );
 
