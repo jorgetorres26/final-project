@@ -34,8 +34,8 @@ class AboutUs extends React.Component {
              from our team of travelers and developers. Our team did a lot of research to hand-pick only the best destinations in the 
              entire world.
             </p>
-
-            <p> </p>
+           
+            
 
           </div>
           <div className="col-md-3">
@@ -52,7 +52,7 @@ class AboutUs extends React.Component {
               <img src="https://scontent.xx.fbcdn.net/v/t1.0-9/20091_10153459144589801_4524922121159965456_n.jpg?oh=ee00f0e4c17a3333d1cf01bd7d51848a&oe=58B2C242" className="img-circle" alt="..." />
               <br />
               <h4 className="footertext">Jorge<p className="text-muted">Developer</p></h4>
-              <p className="footertext">All the images here are hand drawn by this man.</p><br />
+              <p className="footertext"> Coming directly from the island of Puerto Rico, this guy knows a thing or two about beaches.</p><br />
             </center>
           </div>
 

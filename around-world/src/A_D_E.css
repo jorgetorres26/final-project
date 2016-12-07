@@ -150,6 +150,7 @@ footer {
 
 #mapid {
     height: 400px; 
+    background-color: pink;
 }
 
 
@@ -168,4 +169,8 @@ footer {
     height: 100px;
     width: 100px;
 
+}
+
+.col-md-3{
+    padding-top: 40px;
 }

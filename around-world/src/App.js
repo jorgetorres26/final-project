@@ -27,7 +27,7 @@ class Header extends React.Component {
   render() {
     return (
       
-      <div>
+      <div id = "banner">
         <h1>Around the World</h1>
       </div>
     );

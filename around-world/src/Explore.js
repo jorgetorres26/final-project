@@ -39,7 +39,7 @@ class Explore extends React.Component {
     {console.log(this.state)}
     return (
       <div >
-      <h2>This is the Explore page</h2>
+      <h2>What do you want to do today?</h2>
       <SearchForm searchFunction={this.fetchData} resultCount={this.state.markers.length}/>
         <div>
           <Map id="mapid" center={position} zoom={this.state.zoom}>
