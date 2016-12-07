@@ -35,7 +35,7 @@ class Explore extends React.Component {
     var position = [this.state.lat, this.state.lng];
     return (
       <div id= "contentContainer">
-      <h2>What's in your mind?</h2>
+      <h2>Explore different places by searching for keywords that might interest you!</h2>
       <SearchForm searchFunction={this.fetchData} resultCount={this.state.markers.length}/>
         <div>
           <Map id="mapid" center={position} zoom={this.state.zoom}>
