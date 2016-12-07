@@ -160,6 +160,8 @@ footer {
     width: 270px;
 }
 
+
+
 /*
  * About Us
  * --------------------------------------------------
@@ -175,7 +177,6 @@ footer {
 }
 
 #discoverContainer{
-    background-image: url("http://www.travelkingsus.com/wp-content/uploads/2016/08/TravellingTips_TOPBANNER.jpg");
- background-size: cover;
-  background-repeat: no-repeat;
+   
+  text-align: left;
 }
