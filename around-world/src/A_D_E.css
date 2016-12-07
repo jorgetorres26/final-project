@@ -151,6 +151,7 @@ footer {
   }
 }
 
+
 #mapid {
     height: 400px;
 }
@@ -180,3 +181,35 @@ footer {
    
   text-align: left;
 }
+
+/*
+ * Media Queries 
+ * --------------------------------------------------
+ */
+
+
+ @media screen and (min-width: 768px) {
+     #banner{
+         font-size: 10px;
+     }
+
+ }
+@media  (min-width: 768px) {
+    .container { 
+        width: 750px; 
+    } 
+
+    
+}
+@media (min-width: 992px) {
+    .container {
+         width: 970px; 
+    } 
+}
+@media (min-width: 1200px) {
+    .container { 
+        width: 1170px;
+     } 
+}
+
+
