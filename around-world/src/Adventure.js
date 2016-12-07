@@ -50,7 +50,7 @@ class Adventure extends React.Component {
     console.log(this.state);
     return (
       <div >
-        <h2>This is the Adventure page</h2>
+        <h2>Take the Adventure Quiz to see where the perfect destination for you might be!!</h2>
         <div id="contentContainer">
           <Button className="startButton" bsStyle="primary" bsSize="large" block onClick={this.quizStart}>Start the Quiz</Button>
         </div>
@@ -60,7 +60,7 @@ class Adventure extends React.Component {
   else{
     return(
       <div>
-      <h2> Adventure </h2>
+      <h2> Adventure Quiz</h2>
       <div id="contentContainer">
       <Quiz /*resultFunction={this.fetchResult}*/ />
       </div>
