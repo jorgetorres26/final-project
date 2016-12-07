@@ -1,6 +1,5 @@
 #contentContainer{
-    min-height: 400px;
-    max-height: 700px;
+    min-height: 500px;
     align-content: center;
 }
 
@@ -145,7 +144,7 @@ footer {
   }
 
   .sidebar-offcanvas {
-    position: absolute;
+    position: fixed;
     top: 0;
     width: 40%;
     margin-left: 10px;
@@ -154,7 +153,6 @@ footer {
 
 #mapid {
     height: 400px;
-    background-color: pink;
 }
 
 .card-img-top{

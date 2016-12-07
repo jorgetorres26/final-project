@@ -11,7 +11,7 @@ class App extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div className ="App"> 
         <Header />
         <NavBar />
         <main className="container" id = "mainContainer">
@@ -26,8 +26,6 @@ class App extends React.Component {
 class Header extends React.Component {
   render() {
     return (
-
-      
       <div id = "banner">
       <div>
 
@@ -42,7 +40,7 @@ class NavBar extends React.Component {
 
   render() {
     return (
-      <Nav className="navbar navbar-light bg-faded" role = "navigation">
+      <Nav className="navbar navbar-inverse" role = "navigation">
         <ul className="nav navbar-nav">
           <li className="nav-item">
             <Link to="/home" activeClassName="activeLink" className="nav-link">Home</Link>
