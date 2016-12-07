@@ -113,7 +113,9 @@ class SearchForm extends React.Component {
           <InputGroup.Button>
             <Button onClick={this.handleClick}>Search</Button>
           </InputGroup.Button>
-          <FormControl type="text" placeholder="Search for a place to visit... (e.g. 'Romantic Restaurants in Seattle')" onChange={this.handleChange} />
+          {/* I just added the example searches to let the user know what to do... maybe you can do it in a better way? 
+            - Jorge, just in case theres merge conflicts here */}
+          <FormControl type="text" placeholder="Search for a place to visit... (e.g. 'Romantic Restaurants in Seattle' , 'Beaches in Cancun')" onChange={this.handleChange} />
           <InputGroup.Addon>
             {this.props.resultCount} results
           </InputGroup.Addon>

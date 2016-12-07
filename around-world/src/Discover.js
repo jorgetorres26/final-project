@@ -214,6 +214,7 @@ class Discover extends React.Component {
     return (
       <div id = "discoverContainer">
         <h2> Discover </h2>
+        <h3 className = "dSubtitle"> Discover only the best attractions the world has to offer! </h3>
           <div className="container">
                 <div className="row row-offcanvas row-offcanvas-left">
                     <div className="row-offcanvas row-offcanvas-right">

@@ -49,9 +49,10 @@ class Adventure extends React.Component {
     if (this.state.quizStarted == false) {
       return (
         <div >
-          <h2>Take the Adventure Quiz to see where the perfect destination for you might be!!</h2>
+          <h2>The Adventure Quiz </h2>
+          <h3> Let's see what's the perfect destination for you! </h3>
           <div id="contentContainer">
-            <Button className="startButton" bsStyle="primary" bsSize="large" block onClick={this.quizStart}>Start the Quiz</Button>
+            <Button id = "start" className="startButton" bsStyle="primary" bsSize="large" block onClick={this.quizStart}>Start the Quiz</Button>
           </div>
         </div>
       );

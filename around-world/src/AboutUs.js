@@ -12,7 +12,7 @@ class AboutUs extends React.Component {
         
       <div className="container">
 
-        <div className="row">
+        <div className="row" id= "about">
           <h3 className="footertext">About Us</h3>
           <br />
           <div>
