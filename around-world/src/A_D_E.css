@@ -96,8 +96,6 @@ Button.answerButton {
 .resultsInfo {
     display: block;
     padding: 10px;
-    background: darkblue;
-    color: antiquewhite;
     font-weight: 300;
     font-size: 25px;
 }
