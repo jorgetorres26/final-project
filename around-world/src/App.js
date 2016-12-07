@@ -40,22 +40,22 @@ class NavBar extends React.Component {
 
   render() {
     return (
-      <Nav className="navbar navbar-inverse" role = "navigation">
+      <Nav className="navbar navbar-inverse" id ="navbarApp" role = "navigation">
         <ul className="nav navbar-nav">
           <li className="nav-item">
-            <Link to="/home" activeClassName="activeLink" className="nav-link">Home</Link>
+            <Link aria-label="Home button" to="/home" activeClassName="activeLink" className="nav-link">Home</Link>
           </li>
           <li className="nav-item">
-            <Link to="/explore" activeClassName="activeLink" className="nav-link">Explore</Link>
+            <Link aria-label="Explore button" to="/explore" activeClassName="activeLink" className="nav-link">Explore</Link>
           </li>
           <li className="nav-item">
-            <Link to="/adventure" activeClassName="activeLink" className="nav-link">Adventure</Link>
+            <Link aria-label="Adventure button" to="/adventure" activeClassName="activeLink" className="nav-link">Adventure</Link>
           </li>
           <li className="nav-item">
-            <Link to="/discover" activeClassName="activeLink" className="nav-link">Discover</Link>
+            <Link aria-label="Discover button" to="/discover" activeClassName="activeLink" className="nav-link">Discover</Link>
           </li>
           <li className="nav-item">
-            <Link to="/about" activeClassName="activeLink" className="nav-link">About Us</Link>
+            <Link aria-label="About button" to="/about" activeClassName="activeLink" className="nav-link">About Us</Link>
           </li>
         </ul>
       </Nav>
