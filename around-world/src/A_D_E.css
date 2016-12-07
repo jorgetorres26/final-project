@@ -176,3 +176,9 @@ footer {
 .col-md-3{
     padding-top: 40px;
 }
+
+#discoverContainer{
+    background-image: url("http://www.travelkingsus.com/wp-content/uploads/2016/08/TravellingTips_TOPBANNER.jpg");
+ background-size: cover;
+  background-repeat: no-repeat;
+}

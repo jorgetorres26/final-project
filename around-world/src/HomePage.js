@@ -91,7 +91,10 @@ class Homepage extends React.Component {
             <span className="sr-only">Next</span>
           </a>
         </div>
-
+<div>
+<p>i need to add extra stuff on the homepage right after the slider to make it look 
+nicer. i might also add a simple footer on every page to make it look like a website</p>
+</div>
       </div>
 
      

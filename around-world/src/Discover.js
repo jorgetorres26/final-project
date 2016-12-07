@@ -212,7 +212,7 @@ $('[data-toggle=offcanvasright]').click(function() {
 class Discover extends React.Component {
   render() {
     return (
-      <div>
+      <div id = "discoverContainer">
         <h2> Discover </h2>
           <div className="container">
                 <div className="row row-offcanvas row-offcanvas-left">
