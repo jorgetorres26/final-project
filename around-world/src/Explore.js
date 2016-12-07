@@ -31,11 +31,11 @@ class Explore extends React.Component {
   }
   
   render() {
-    console.log(this.state.markers);
+    console.log(this.state);
     var position = [this.state.lat, this.state.lng];
     return (
       <div >
-      <h2>This is the Explore page</h2>
+      <h2>What do you want to do today?</h2>
       <SearchForm searchFunction={this.fetchData} resultCount={this.state.markers.length}/>
         <div>
           <Map id="mapid" center={position} zoom={this.state.zoom}>

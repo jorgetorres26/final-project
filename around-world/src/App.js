@@ -14,7 +14,7 @@ class App extends React.Component {
       <div>
         <Header />
         <NavBar />
-        <main className="container" >
+        <main className="container" id = "mainContainer">
           {this.props.children}
         </main>
         <Footer />
@@ -26,8 +26,13 @@ class App extends React.Component {
 class Header extends React.Component {
   render() {
     return (
+
+      
+      <div id = "banner">
       <div>
+
         <h1>Around the World</h1>
+      </div>
       </div>
     );
   }
@@ -56,6 +61,8 @@ class NavBar extends React.Component {
           </li>
         </ul>
       </Nav>
+
+      
     );
   }
 }
