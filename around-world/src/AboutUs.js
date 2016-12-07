@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './A_D_E.css';
 import HomePage from './HomePage';
 import { Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
 import { Link, hashHistory } from 'react-router';
@@ -13,7 +13,7 @@ class AboutUs extends React.Component {
       <div className="container">
 
         <div className="row" id= "about">
-          <h3 className="footertext" aria-label="About Us Page">About Us</h3>
+          <h2 className="footertext" aria-label="About Us Page">About Us</h2>
           <br />
           <div>
             <p> Around the World is designed to help people find fun and exciting destinations to travel to. 
@@ -64,7 +64,7 @@ class AboutUs extends React.Component {
                 <img aria-label="A photo of Joe, one of the developers" src="https://scontent.xx.fbcdn.net/v/t1.0-9/13151594_1213068612044309_1817749460380821887_n.jpg?oh=60ee2ab84066df6b142c8ac52e8b8981&oe=58B5CA82" className="img-circle" alt="..." />
                 <br />
                 <h4 className="footertext" aria-label="Developer of the webpage" >Joe<p className="text-muted">Developer</p></h4>
-                <p className="footertext">This pretty site and the copy it holds are all thanks to this guy.</p><br />
+                <p className="footertext">Being social a social guy, this man likes to explore with his friends whenever he can.</p><br />
               </center>
             </div>
 
@@ -73,7 +73,7 @@ class AboutUs extends React.Component {
                 <img aria-label="A photo of Muhaamed, one of the developers" src="https://scontent.xx.fbcdn.net/v/t1.0-9/12313853_118709101830538_5825856325060765546_n.jpg?oh=fcc1328344ccaea245127d1918aeaed7&oe=58BE7D8D" className="img-circle" alt="the-brains" />
                 <br />
                 <h4 className="footertext" aria-label="Developer of the webpage">Muhaamed<p className="text-muted">Developer</p></h4>
-                <p className="footertext">You can thank all the crazy programming here to this guy.</p><br />
+                <p className="footertext">With all his guys hard work, this man thinks about vacation often.</p><br />
               </center>
             </div>
           </div>
