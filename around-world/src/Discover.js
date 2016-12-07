@@ -281,6 +281,7 @@ class Discover extends React.Component {
       <div>
         <h2> Discover </h2>
         <h3> Arts </h3>
+        <img class="rig-img" src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=CoQBdwAAAC62fcYUOfMGpPzV-iAktQZAa2pVPyFxDUFGqSl6wU9skczZXBjcTrqDxmn9enqBBdPdsQ_SQJYN3PbPRiMM_UAsy1KfHT8A6RA1h1HcDYPLctsjdFJdAPvQXS1wS-ZjGwuL_5wdoOPRQbj1ZFm8CCPohaoSWuK7-Vv7nZErAzrREhD1mLP4Yt2MWSnNJL6PdfBYGhTUs6ih7-mMRrRIDUTu0TfMgexsTQ&key=AIzaSyDPqNFY-8y3iThJr9cy5GxZO18Qo7iCmmQ" alt="Pic From Google"/>
         <div className="row">
           <div className="col-md-4">
           <img className="card-img-top" src="http://replygif.net/thumbnail/925.gif" alt="Card image cap"/>
