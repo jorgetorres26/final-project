@@ -6,11 +6,6 @@ import './index.css';
 import {arts} from './Discover.js'
 
 
-
-
-
-
-
 class Homepage extends React.Component {
   constructor(props) {
     super(props);

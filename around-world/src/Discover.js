@@ -224,7 +224,7 @@ class Discover extends React.Component {
                         </p>
                         
                         <div className="well sidebar-nav" >
-                          <ul className="nav">
+                          <ul aria-label="List of interests" className="nav">
                             <li>Interests</li>
                             <li><a href="#discover/arts">Arts</a></li>
                             <li><a href="#discover/beaches">Beaches</a></li>

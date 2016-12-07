@@ -13,7 +13,7 @@ class AboutUs extends React.Component {
       <div className="container">
 
         <div className="row" id= "about">
-          <h3 className="footertext">About Us</h3>
+          <h3 className="footertext" aria-label="About Us Page">About Us</h3>
           <br />
           <div>
             <p> Around the World is designed to help people find fun and exciting destinations to travel to. 
@@ -39,42 +39,44 @@ class AboutUs extends React.Component {
             
 
           </div>
-          <div className="col-md-3">
-            <center>
-              <img src="https://scontent.xx.fbcdn.net/v/t1.0-9/1003641_10200266217803076_189927918_n.jpg?oh=909e0aff87262396060aac4628f49d93&oe=58FA4A45" className="img-circle" alt="the-brains" />
-              <br />
-              <h4 className="footertext">Sarah<p className="text-muted">Developer</p></h4>
-              <p className="footertext">You can thank all the crazy programming here to this lady.</p><br />
-            </center>
-          </div>
 
-          <div className="col-md-3">
-            <center>
-              <img src="https://scontent.xx.fbcdn.net/v/t1.0-9/20091_10153459144589801_4524922121159965456_n.jpg?oh=ee00f0e4c17a3333d1cf01bd7d51848a&oe=58B2C242" className="img-circle" alt="..." />
-              <br />
-              <h4 className="footertext">Jorge<p className="text-muted">Developer</p></h4>
-              <p className="footertext"> Coming directly from the island of Puerto Rico, this man knows a thing or two about beaches.</p><br />
-            </center>
-          </div>
+          <div aria-label="Developers of the webpage">
+            <div className="col-md-3">
+              <center>
+                <img aria-label="A photo of Sarah, one of the developers" src="https://scontent.xx.fbcdn.net/v/t1.0-9/1003641_10200266217803076_189927918_n.jpg?oh=909e0aff87262396060aac4628f49d93&oe=58FA4A45" className="img-circle" alt="the-brains" />
+                <br />
+                <h4 className="footertext" aria-label="Developer of the webpage" >Sarah<p className="text-muted">Developer</p></h4>
+                <p className="footertext">You can thank all the crazy programming here to this lady.</p><br />
+              </center>
+            </div>
 
-          <div className="col-md-3">
-            <center>
-              <img src="https://scontent.xx.fbcdn.net/v/t1.0-9/13151594_1213068612044309_1817749460380821887_n.jpg?oh=60ee2ab84066df6b142c8ac52e8b8981&oe=58B5CA82" className="img-circle" alt="..." />
-              <br />
-              <h4 className="footertext">Joe<p className="text-muted">Developer</p></h4>
-              <p className="footertext">This pretty site and the copy it holds are all thanks to this guy.</p><br />
-            </center>
-          </div>
+            <div className="col-md-3">
+              <center>
+                <img aria-label="A photo of Jorge, one of the developers" src="https://scontent.xx.fbcdn.net/v/t1.0-9/20091_10153459144589801_4524922121159965456_n.jpg?oh=ee00f0e4c17a3333d1cf01bd7d51848a&oe=58B2C242" className="img-circle" alt="..." />
+                <br />
+                <h4 className="footertext" aria-label="Developer of the webpage" >Jorge<p className="text-muted">Developer</p></h4>
+                <p className="footertext"> Coming directly from the island of Puerto Rico, this man knows a thing or two about beaches.</p><br />
+              </center>
+            </div>
 
-          <div className="col-md-3">
-            <center>
-              <img src="https://scontent.xx.fbcdn.net/v/t1.0-9/12313853_118709101830538_5825856325060765546_n.jpg?oh=fcc1328344ccaea245127d1918aeaed7&oe=58BE7D8D" className="img-circle" alt="the-brains" />
-              <br />
-              <h4 className="footertext">Muhaamed<p className="text-muted">Developer</p></h4>
-              <p className="footertext">You can thank all the crazy programming here to this guy.</p><br />
-            </center>
-          </div>
+            <div className="col-md-3">
+              <center>
+                <img aria-label="A photo of Joe, one of the developers" src="https://scontent.xx.fbcdn.net/v/t1.0-9/13151594_1213068612044309_1817749460380821887_n.jpg?oh=60ee2ab84066df6b142c8ac52e8b8981&oe=58B5CA82" className="img-circle" alt="..." />
+                <br />
+                <h4 className="footertext" aria-label="Developer of the webpage" >Joe<p className="text-muted">Developer</p></h4>
+                <p className="footertext">This pretty site and the copy it holds are all thanks to this guy.</p><br />
+              </center>
+            </div>
 
+            <div className="col-md-3">
+              <center>
+                <img aria-label="A photo of Muhaamed, one of the developers" src="https://scontent.xx.fbcdn.net/v/t1.0-9/12313853_118709101830538_5825856325060765546_n.jpg?oh=fcc1328344ccaea245127d1918aeaed7&oe=58BE7D8D" className="img-circle" alt="the-brains" />
+                <br />
+                <h4 className="footertext" aria-label="Developer of the webpage">Muhaamed<p className="text-muted">Developer</p></h4>
+                <p className="footertext">You can thank all the crazy programming here to this guy.</p><br />
+              </center>
+            </div>
+          </div>
         </div>
       </div>
       </div>

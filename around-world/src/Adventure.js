@@ -52,7 +52,7 @@ class Adventure extends React.Component {
           <h2>The Adventure Quiz </h2>
           <h3> Let's see what's the perfect destination for you! </h3>
           <div id="contentContainer">
-            <Button id = "start" className="startButton" bsStyle="primary" bsSize="large" block onClick={this.quizStart}>Start the Quiz</Button>
+            <Button aria-label="Start Quiz button" id = "start" className="startButton" bsStyle="primary" bsSize="large" block onClick={this.quizStart}>Start the Quiz</Button>
           </div>
         </div>
       );
@@ -110,7 +110,7 @@ class Quiz extends React.Component {
       case 0: return (
         <div id="quizContainer">
           <Image className="image" src="http://images.mentalfloss.com/sites/default/files/styles/article_640x430/public/166142726.jpg" rounded></Image>
-          <p className="questionText">What is your budget?</p>
+          <p aria-label="Question" className="questionText">What is your budget?</p>
           <div className="answers">
             <Button className="answerButton" onClick={(e) => { this.handleClick('$') } }>$ Almost Free</Button>
             <Button className="answerButton" onClick={(e) => { this.handleClick('$$') } }>$$ Little Money</Button>
@@ -122,7 +122,7 @@ class Quiz extends React.Component {
       case 1: return (
         <div id="quizContainer">
           <Image className="image" src="http://www.worldatlas.com/aatlas/newart/continentslg.gif" rounded></Image>
-          <p className="questionText">Where would you prefer to explore?</p>
+          <p aria-label="Question" className="questionText">Where would you prefer to explore?</p>
           <div className="answers">
             <Button className="answerButton" onClick={(e) => { this.handleClick('america') } }>North America</Button>
             <Button className="answerButton" onClick={(e) => { this.handleClick('') } }>No Preference</Button>
@@ -134,7 +134,7 @@ class Quiz extends React.Component {
       case 2: return (
         <div id="quizContainer">
           <Image className="image" src="http://www.familysmart.net/images/posts/family-travel-tips.jpg" rounded></Image>
-          <p className="questionText">Who are you traveling with?</p>
+          <p aria-label="Question" className="questionText">Who are you traveling with?</p>
           <div className="answers">
             <Button className="answerButton" onClick={(e) => { this.handleClick('') } }>Me, Myself, and I</Button>
             <Button className="answerButton" onClick={(e) => { this.handleClick('Romantic') } }>My Lover</Button>
@@ -146,7 +146,7 @@ class Quiz extends React.Component {
       case 3: return (
         <div id="quizContainer">
           <Image className="image" src="http://wdy.h-cdn.co/assets/cm/15/09/54f0fbd48fba0_-_1-couple-vacation-tropical-lgn.jpg" rounded></Image>
-          <p className="questionText">Why are you traveling?</p>
+          <p aria-label="Question" className="questionText">Why are you traveling?</p>
           <div className="answers">
             <Button className="answerButton" onClick={(e) => { this.handleClick('nightclub') } }>I Want to Celebrate</Button>
             <Button className="answerButton" onClick={(e) => { this.handleClick('spa') } }>I Want to Escape and Relax</Button>
@@ -158,7 +158,7 @@ class Quiz extends React.Component {
       case 4: return (
         <div id="quizContainer">
           <Image className="image" src="https://www.visitnc.com/resimg.php/imgcrop/2/38377/preview/800/480/HikeWaterfall.jpg" rounded></Image>
-          <p className="questionText">How Close Would You Like to be to Nature?</p>
+          <p aria-label="Question" className="questionText">How Close Would You Like to be to Nature?</p>
           <div className="answers">
             <Button className="answerButton" onClick={(e) => { this.handleClick('park') } }>Super Close</Button>
             <Button className="answerButton" onClick={(e) => { this.handleClick('waterfall') } }>Semi Close</Button>
@@ -170,7 +170,7 @@ class Quiz extends React.Component {
       case 5: return (
         <div id="quizContainer">
           <Image className="image" src="http://images.r.cruisecritic.com/features/2016/03/10-lux-cruise-main.jpg" rounded></Image>
-          <p className="questionText">How would you like to travel?</p>
+          <p aria-label="Question" className="questionText">How would you like to travel?</p>
           <div className="answers" onClick={this.fetchData}>
             <Button className="answerButton" onClick={(e) => { this.handleClick('') } }>Car or Bus</Button>
             <Button className="answerButton" onClick={(e) => { this.handleClick('cruise') } }>Boat</Button>
@@ -181,7 +181,7 @@ class Quiz extends React.Component {
       );
       case 6:
         return (
-          <div id="quizContainer">
+          <div aria-label="Results" id="quizContainer">
             <h3> RESULTS: </h3>
             <Button onClick={this.handleResult}>Show Results</Button>
           </div>
