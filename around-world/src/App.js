@@ -11,7 +11,7 @@ class App extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div className ="App"> 
         <Header />
         <NavBar />
         <main className="container" id = "mainContainer">
@@ -26,8 +26,6 @@ class App extends React.Component {
 class Header extends React.Component {
   render() {
     return (
-
-      
       <div id = "banner">
       <div>
 

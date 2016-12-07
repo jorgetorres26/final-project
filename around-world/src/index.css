@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background: linear-gradient(to bottom, #E1ECF0 , #05B9F7);
+  background-color:#C6DEFF;
    
 }
 
@@ -25,7 +25,4 @@ body {
 .carousel-inner > .item > .carousel-caption > p
 {
   color: white;
-}
-#homepage{
- 
 }

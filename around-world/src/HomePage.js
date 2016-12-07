@@ -57,7 +57,7 @@ class Homepage extends React.Component {
             </div>
 
             <div className="item">
-              <img src="https://media-cdn.tripadvisor.com/media/photo-p/07/7d/81/00/girls-on-the-current.jpg" alt="location" />
+              <img src="http://www.atlantisbahamas.com/media/Things%20To%20Do/Overview/ThingsToDo_DolphinCay.jpg" alt="location" />
               <div className="carousel-caption">
                 <h3>Bahamas(Atlantis)</h3>
                 <p>Visit Atlantis and have an experience you have never had before,

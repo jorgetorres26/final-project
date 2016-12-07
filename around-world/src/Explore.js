@@ -34,7 +34,7 @@ class Explore extends React.Component {
     console.log(this.state);
     var position = [this.state.lat, this.state.lng];
     return (
-      <div >
+      <div id= "contentContainer">
       <h2>What do you want to do today?</h2>
       <SearchForm searchFunction={this.fetchData} resultCount={this.state.markers.length}/>
         <div>
