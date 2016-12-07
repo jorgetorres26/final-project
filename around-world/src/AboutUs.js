@@ -46,7 +46,7 @@ class AboutUs extends React.Component {
                 <img aria-label="A photo of Sarah, one of the developers" src="https://scontent.xx.fbcdn.net/v/t1.0-9/1003641_10200266217803076_189927918_n.jpg?oh=909e0aff87262396060aac4628f49d93&oe=58FA4A45" className="img-circle" alt="the-brains" />
                 <br />
                 <h4 className="footertext" aria-label="Developer of the webpage" >Sarah<p className="text-muted">Developer</p></h4>
-                <p className="footertext">You can thank all the crazy programming here to this lady.</p><br />
+                <p className="footertext">With her love of excitement and adventure, this lady tries something new on every vacation. </p><br />
               </center>
             </div>
 
