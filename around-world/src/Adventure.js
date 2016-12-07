@@ -112,9 +112,9 @@ class Quiz extends React.Component {
           <Image className="image" src="http://images.mentalfloss.com/sites/default/files/styles/article_640x430/public/166142726.jpg" rounded></Image>
           <p className="questionText">What is your budget?</p>
           <div className="answers">
-            <Button className="answerButton" onClick={(e) => { this.handleClick('') } }>$ Almost Free</Button>
-            <Button className="answerButton" onClick={(e) => { this.handleClick('') } }>$$ Little Money</Button>
-            <Button className="answerButton" onClick={(e) => { this.handleClick('') } }>$$$ Some Money</Button>
+            <Button className="answerButton" onClick={(e) => { this.handleClick('$') } }>$ Almost Free</Button>
+            <Button className="answerButton" onClick={(e) => { this.handleClick('$$') } }>$$ Little Money</Button>
+            <Button className="answerButton" onClick={(e) => { this.handleClick('$$$') } }>$$$ Some Money</Button>
             <Button className="answerButton" onClick={(e) => { this.handleClick('') } }>$$$$ No Budget</Button>
           </div>
         </div>
@@ -148,8 +148,8 @@ class Quiz extends React.Component {
           <Image className="image" src="http://wdy.h-cdn.co/assets/cm/15/09/54f0fbd48fba0_-_1-couple-vacation-tropical-lgn.jpg" rounded></Image>
           <p className="questionText">Why are you traveling?</p>
           <div className="answers">
-            <Button className="answerButton" onClick={(e) => { this.handleClick('club') } }>I Want to Celebrate</Button>
-            <Button className="answerButton" onClick={(e) => { this.handleClick('beach') } }>I Want to Escape and Relax</Button>
+            <Button className="answerButton" onClick={(e) => { this.handleClick('nightclub') } }>I Want to Celebrate</Button>
+            <Button className="answerButton" onClick={(e) => { this.handleClick('spa') } }>I Want to Escape and Relax</Button>
             <Button className="answerButton" onClick={(e) => { this.handleClick('hiking') } }>I Want to Adventure and Explore</Button>
             <Button className="answerButton" onClick={(e) => { this.handleClick('museum') } }>I want to Learn Something New</Button>
           </div>
