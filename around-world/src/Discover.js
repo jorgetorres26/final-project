@@ -1067,7 +1067,8 @@ class Surfing extends React.Component {
   }
 }
 
-export {arts};
+export {arts,beaches,cycling,birding,business,camping,gambling,golfing,hiking,parks,nightlife,shopping,
+skiing,surfing,kayaking};
 export default Discover;
 
 

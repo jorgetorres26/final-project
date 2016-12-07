@@ -3,7 +3,9 @@ import { Link, hashHistory } from 'react-router';
 import { Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
 import { Carousel, Button } from 'react-bootstrap';
 import './index.css';
-import {arts} from './Discover.js'
+import {arts,beaches,cycling,birding,business,
+  camping,gambling,golfing,hiking,parks,nightlife,
+  shopping,skiing,surfing,kayaking} from './Discover.js'
 
 
 class Homepage extends React.Component {
@@ -11,6 +13,7 @@ class Homepage extends React.Component {
     super(props);
   }
   render() {
+    
     return (
       
       <div className="container">
@@ -64,8 +67,8 @@ class Homepage extends React.Component {
             <div className="item">
               <img src={arts[0].photo} alt="location" />
               <div className="carousel-caption">
-                <h3>Location</h3>
-                <p>The description of the perticular location should be here.</p>
+                <h3>{arts[0].loc}</h3>
+                <p>{arts[0].name}</p>
               </div>
             </div>
 
