@@ -17,7 +17,8 @@ class Homepage extends React.Component {
   }
   render() {
     return (
-      <div >
+      
+      <div className="container">
         <h2>This is the home page</h2>
        
         <div id="myCarousel" className="carousel slide" data-ride="carousel">
