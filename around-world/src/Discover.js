@@ -4,6 +4,7 @@ import './A_D_E.css'
 import _ from 'lodash';
 import $ from "jquery";
 
+// Each interest with their 10 respective top places with the name, location, site (Google Maps) and a photo
 var arts = [
     { name: "Louvre Museum", loc: "Paris, France", site: "https://www.google.com/maps/place/Louvre+Museum", photo: "http://traveldigg.com/wp-content/uploads/2016/06/Louvre-Museum-Pictures-720x404.jpg"}, 
     { name: "Millennium Park", loc: "Chicago, USA", site: "https://www.google.com/maps/place/Millennium+Park+Chicago", photo: "https://www.cityofchicago.org/content/dam/city/depts/dca/Public%20Art/crownfountain.jpg" }, 
@@ -201,6 +202,7 @@ var kayaking = [
     { name: "Glacier Bay", loc: "Alaska, USA", site: "https://www.google.com/maps/place/Glacier+Bay+Alaska", photo: "https://www.theadventurejunkies.com/wp-content/uploads/9657169097_524f1a139b_k.jpg?x63268"}
   ]
 
+// JQuery methods to display sidebar menu for all interests
 $('[data-toggle=offcanvas]').click(function() {
   $('.row-offcanvas-left').toggleClass('active');
 });
@@ -213,8 +215,7 @@ class Discover extends React.Component {
   render() {
     return (
       <div id = "discoverContainer">
-        <h2> Discover </h2>
-        <h3 className = "dSubtitle"> Discover only the best attractions the world has to offer! </h3>
+        <h2> Discover the possibilities that these best attractions have to offer!</h2>
           <div className="container">
                 <div className="row row-offcanvas row-offcanvas-left">
                     <div className="row-offcanvas row-offcanvas-right">
@@ -222,7 +223,7 @@ class Discover extends React.Component {
                         <p className="visible-xs">
                           <button className="btn btn-primary btn-xs" type="button" data-toggle="offcanvas"><i className="glyphicon glyphicon-chevron-left"></i></button>
                         </p>
-                        
+                        {/* sidebar with the list of interests and links to those sections  */}
                         <div className="well sidebar-nav" >
                           <ul aria-label="List of interests" className="nav">
                             <li>Interests</li>
@@ -244,6 +245,7 @@ class Discover extends React.Component {
                           </ul>
                         </div>
                       </div>
+                      {/* Each interest section is added and anchored for sidebar access  */}
                       <div className="col-xs-12 col-sm-10">
                           <a name="discover/arts"><Arts/></a>
                           <a name="discover/beaches"><Beaches /></a>
@@ -269,7 +271,9 @@ class Discover extends React.Component {
   }
 }
 
-
+{/* each array is shuffled and three are picked to display. Their information
+  (name, location, site and photo) is set to the state and added visually
+  *applied to the rest of the classes - same except for naming* */}
 class Arts extends React.Component {
   constructor(props) {
     super(props);
