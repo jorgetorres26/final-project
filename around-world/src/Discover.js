@@ -300,21 +300,21 @@ class Arts extends React.Component {
         <h3> Arts </h3>
         <div className="row">
           <div className="col-md-4">
-          <a href = {this.state.site[0]}><img className="card-img-top" src={this.state.photo[0]} alt="Card image cap"/></a>
+          <a target= "_blank" href = {this.state.site[0]}><img className="card-img-top" src={this.state.photo[0]} alt="Card image cap"/></a>
             <div className="card card-block">
               <h3 className="card-title">{this.state.name[0]}</h3> 
               <p className="card-text">{this.state.loc[0]}</p>
             </div>
           </div>
           <div className="col-md-4">
-          <a href = {this.state.site[1]}><img className="card-img-top" src={this.state.photo[1]} alt="Card image cap"/></a>
+          <a target= "_blank" href = {this.state.site[1]}><img className="card-img-top" src={this.state.photo[1]} alt="Card image cap"/></a>
             <div className="card card-block">
               <h3 className="card-title">{this.state.name[1]}</h3> 
               <p className="card-text">{this.state.loc[1]}</p>
             </div>
           </div>
           <div className="col-md-4">
-          <a href = {this.state.site[2]}><img className="card-img-top" src={this.state.photo[2]} alt="Card image cap"/></a>
+          <a target= "_blank" href = {this.state.site[2]}><img className="card-img-top" src={this.state.photo[2]} alt="Card image cap"/></a>
             <div className="card card-block">
               <h3 className="card-title">{this.state.name[2]}</h3> 
               <p className="card-text">{this.state.loc[2]}</p>
@@ -354,21 +354,21 @@ class Beaches extends React.Component {
         <h3> Beaches </h3>
         <div className="row">
           <div className="col-md-4">
-          <a href = {this.state.site[0]}><img className="card-img-top" src= {this.state.photo[0]} alt="Card image cap"/></a>
+          <a target= "_blank" href = {this.state.site[0]}><img className="card-img-top" src= {this.state.photo[0]} alt="Card image cap"/></a>
             <div className="card card-block">
               <h3 className="card-title">{this.state.name[0]}</h3> 
               <p className="card-text">{this.state.loc[0]}</p>
             </div>
           </div>
           <div className="col-md-4">
-          <a href = {this.state.site[1]}><img className="card-img-top" src= {this.state.photo[1]} alt="Card image cap"/></a>
+          <a target= "_blank" href = {this.state.site[1]}><img className="card-img-top" src= {this.state.photo[1]} alt="Card image cap"/></a>
             <div className="card card-block">
               <h3 className="card-title">{this.state.name[1]}</h3> 
               <p className="card-text">{this.state.loc[1]}</p>
             </div>
           </div>
           <div className="col-md-4">
-          <a href = {this.state.site[2]}><img className="card-img-top" src= {this.state.photo[2]} alt="Card image cap"/></a>
+          <a target= "_blank" href = {this.state.site[2]}><img className="card-img-top" src= {this.state.photo[2]} alt="Card image cap"/></a>
             <div className="card card-block">
               <h3 className="card-title">{this.state.name[2]}</h3> 
               <p className="card-text">{this.state.loc[2]}</p>
@@ -408,21 +408,21 @@ class Cycling extends React.Component {
         <h3> Cycling </h3>
         <div className="row">
           <div className="col-md-4">
-          <a href = {this.state.site[0]}><img className="card-img-top" src={this.state.photo[0]} alt="Card image cap"/></a>
+          <a target= "_blank" href = {this.state.site[0]}><img className="card-img-top" src={this.state.photo[0]} alt="Card image cap"/></a>
             <div className="card card-block">
               <h3 className="card-title">{this.state.name[0]}</h3> 
               <p className="card-text">{this.state.loc[0]}</p>
             </div>
           </div>
           <div className="col-md-4">
-          <a href = {this.state.site[1]}><img className="card-img-top" src={this.state.photo[1]} alt="Card image cap"/></a>
+          <a target= "_blank" href = {this.state.site[1]}><img className="card-img-top" src={this.state.photo[1]} alt="Card image cap"/></a>
             <div className="card card-block">
               <h3 className="card-title">{this.state.name[1]}</h3> 
               <p className="card-text">{this.state.loc[1]}</p>
             </div>
           </div>
           <div className="col-md-4">
-          <a href = {this.state.site[2]}><img className="card-img-top" src={this.state.photo[2]} alt="Card image cap"/></a>
+          <a target= "_blank" href = {this.state.site[2]}><img className="card-img-top" src={this.state.photo[2]} alt="Card image cap"/></a>
             <div className="card card-block">
               <h3 className="card-title">{this.state.name[2]}</h3> 
               <p className="card-text">{this.state.loc[2]}</p>
@@ -461,21 +461,21 @@ class Birding extends React.Component {
         <h3> Birding </h3>
         <div className="row">
           <div className="col-md-4">
-          <a href = {this.state.site[0]}><img className="card-img-top" src= {this.state.photo[0]} alt="Card image cap"/></a>
+          <a target= "_blank" href = {this.state.site[0]}><img className="card-img-top" src= {this.state.photo[0]} alt="Card image cap"/></a>
             <div className="card card-block">
               <h3 className="card-title">{this.state.name[0]}</h3> 
               <p className="card-text">{this.state.loc[0]}</p>
             </div>
           </div>
           <div className="col-md-4">
-          <a href = {this.state.site[1]}><img className="card-img-top" src={this.state.photo[1]} alt="Card image cap"/></a>
+          <a target= "_blank" href = {this.state.site[1]}><img className="card-img-top" src={this.state.photo[1]} alt="Card image cap"/></a>
             <div className="card card-block">
               <h3 className="card-title">{this.state.name[1]}</h3> 
               <p className="card-text">{this.state.loc[1]}</p>
             </div>
           </div>
           <div className="col-md-4">
-          <a href = {this.state.site[2]}><img className="card-img-top" src={this.state.photo[2]} alt="Card image cap"/></a>
+          <a target= "_blank" href = {this.state.site[2]}><img className="card-img-top" src={this.state.photo[2]} alt="Card image cap"/></a>
             <div className="card card-block">
               <h3 className="card-title">{this.state.name[2]}</h3> 
               <p className="card-text">{this.state.loc[2]}</p>
@@ -514,21 +514,21 @@ class Business extends React.Component {
         <h3> Business </h3>
         <div className="row">
           <div className="col-md-4">
-          <a href = {this.state.site[0]}><img className="card-img-top" src= {this.state.photo[0]} alt="Card image cap"/></a>
+          <a target= "_blank" href = {this.state.site[0]}><img className="card-img-top" src= {this.state.photo[0]} alt="Card image cap"/></a>
             <div className="card card-block">
               <h3 className="card-title">{this.state.name[0]}</h3> 
               <p className="card-text">{this.state.loc[0]}</p>
             </div>
           </div>
           <div className="col-md-4">
-          <a href = {this.state.site[1]}><img className="card-img-top" src={this.state.photo[1]} alt="Card image cap"/></a>
+          <a target= "_blank" href = {this.state.site[1]}><img className="card-img-top" src={this.state.photo[1]} alt="Card image cap"/></a>
             <div className="card card-block">
               <h3 className="card-title">{this.state.name[1]}</h3> 
               <p className="card-text">{this.state.loc[1]}</p>
             </div>
           </div>
           <div className="col-md-4">
-          <a href = {this.state.site[2]}><img className="card-img-top" src={this.state.photo[2]} alt="Card image cap"/></a>
+          <a target= "_blank" href = {this.state.site[2]}><img className="card-img-top" src={this.state.photo[2]} alt="Card image cap"/></a>
             <div className="card card-block">
               <h3 className="card-title">{this.state.name[2]}</h3> 
               <p className="card-text">{this.state.loc[2]}</p>
@@ -566,21 +566,21 @@ class Camping extends React.Component {
         <h3> Camping </h3>
         <div className="row">
           <div className="col-md-4">
-          <a href = {this.state.site[0]}><img className="card-img-top" src= {this.state.photo[0]} alt="Card image cap"/></a>
+          <a target= "_blank" href = {this.state.site[0]}><img className="card-img-top" src= {this.state.photo[0]} alt="Card image cap"/></a>
             <div className="card card-block">
               <h3 className="card-title">{this.state.name[0]}</h3> 
               <p className="card-text">{this.state.loc[0]}</p>
             </div>
           </div>
           <div className="col-md-4">
-          <a href = {this.state.site[1]}><img className="card-img-top" src={this.state.photo[1]} alt="Card image cap"/></a>
+          <a target= "_blank" href = {this.state.site[1]}><img className="card-img-top" src={this.state.photo[1]} alt="Card image cap"/></a>
             <div className="card card-block">
               <h3 className="card-title">{this.state.name[1]}</h3> 
               <p className="card-text">{this.state.loc[1]}</p>
             </div>
           </div>
           <div className="col-md-4">
-          <a href = {this.state.site[2]}><img className="card-img-top" src={this.state.photo[2]} alt="Card image cap"/></a>
+          <a target= "_blank" href = {this.state.site[2]}><img className="card-img-top" src={this.state.photo[2]} alt="Card image cap"/></a>
             <div className="card card-block">
               <h3 className="card-title">{this.state.name[2]}</h3> 
               <p className="card-text">{this.state.loc[2]}</p>
@@ -619,21 +619,21 @@ class Gambling extends React.Component {
         <h3> Gambling </h3>
         <div className="row">
           <div className="col-md-4">
-          <a href = {this.state.site[0]}><img className="card-img-top" src= {this.state.photo[0]} alt="Card image cap"/></a>
+          <a target= "_blank" href = {this.state.site[0]}><img className="card-img-top" src= {this.state.photo[0]} alt="Card image cap"/></a>
             <div className="card card-block">
               <h3 className="card-title">{this.state.name[0]}</h3> 
               <p className="card-text">{this.state.loc[0]}</p>
             </div>
           </div>
           <div className="col-md-4">
-          <a href = {this.state.site[1]}><img className="card-img-top" src={this.state.photo[1]} alt="Card image cap"/></a>
+          <a target= "_blank" href = {this.state.site[1]}><img className="card-img-top" src={this.state.photo[1]} alt="Card image cap"/></a>
             <div className="card card-block">
               <h3 className="card-title">{this.state.name[1]}</h3> 
               <p className="card-text">{this.state.loc[1]}</p>
             </div>
           </div>
           <div className="col-md-4">
-          <a href = {this.state.site[2]}><img className="card-img-top" src={this.state.photo[2]} alt="Card image cap"/></a>
+          <a target= "_blank" href = {this.state.site[2]}><img className="card-img-top" src={this.state.photo[2]} alt="Card image cap"/></a>
             <div className="card card-block">
               <h3 className="card-title">{this.state.name[2]}</h3> 
               <p className="card-text">{this.state.loc[2]}</p>
@@ -672,21 +672,21 @@ class Golfing extends React.Component {
         <h3> Golfing </h3>
         <div className="row">
           <div className="col-md-4">
-          <a href = {this.state.site[0]}><img className="card-img-top" src= {this.state.photo[0]} alt="Card image cap"/></a>
+          <a target= "_blank" href = {this.state.site[0]}><img className="card-img-top" src= {this.state.photo[0]} alt="Card image cap"/></a>
             <div className="card card-block">
               <h3 className="card-title">{this.state.name[0]}</h3> 
               <p className="card-text">{this.state.loc[0]}</p>
             </div>
           </div>
           <div className="col-md-4">
-          <a href = {this.state.site[1]}><img className="card-img-top" src={this.state.photo[1]} alt="Card image cap"/></a>
+          <a target= "_blank" href = {this.state.site[1]}><img className="card-img-top" src={this.state.photo[1]} alt="Card image cap"/></a>
             <div className="card card-block">
               <h3 className="card-title">{this.state.name[1]}</h3> 
               <p className="card-text">{this.state.loc[1]}</p>
             </div>
           </div>
           <div className="col-md-4">
-          <a href = {this.state.site[2]}><img className="card-img-top" src={this.state.photo[2]} alt="Card image cap"/></a>
+          <a target= "_blank" href = {this.state.site[2]}><img className="card-img-top" src={this.state.photo[2]} alt="Card image cap"/></a>
             <div className="card card-block">
               <h3 className="card-title">{this.state.name[2]}</h3> 
               <p className="card-text">{this.state.loc[2]}</p>
@@ -725,21 +725,21 @@ class Hiking extends React.Component {
         <h3> Hiking </h3>
         <div className="row">
           <div className="col-md-4">
-          <a href = {this.state.site[0]}><img className="card-img-top" src= {this.state.photo[0]} alt="Card image cap"/></a>
+          <a target= "_blank" href = {this.state.site[0]}><img className="card-img-top" src= {this.state.photo[0]} alt="Card image cap"/></a>
             <div className="card card-block">
               <h3 className="card-title">{this.state.name[0]}</h3> 
               <p className="card-text">{this.state.loc[0]}</p>
             </div>
           </div>
           <div className="col-md-4">
-          <a href = {this.state.site[1]}><img className="card-img-top" src={this.state.photo[1]} alt="Card image cap"/></a>
+          <a target= "_blank" href = {this.state.site[1]}><img className="card-img-top" src={this.state.photo[1]} alt="Card image cap"/></a>
             <div className="card card-block">
               <h3 className="card-title">{this.state.name[1]}</h3> 
               <p className="card-text">{this.state.loc[1]}</p>
             </div>
           </div>
           <div className="col-md-4">
-          <a href = {this.state.site[2]}><img className="card-img-top" src={this.state.photo[2]} alt="Card image cap"/></a>
+          <a target= "_blank" href = {this.state.site[2]}><img className="card-img-top" src={this.state.photo[2]} alt="Card image cap"/></a>
             <div className="card card-block">
               <h3 className="card-title">{this.state.name[2]}</h3> 
               <p className="card-text">{this.state.loc[2]}</p>
@@ -777,21 +777,21 @@ class Parks extends React.Component {
         <h3> Parks </h3>
         <div className="row">
           <div className="col-md-4">
-          <a href = {this.state.site[0]}><img className="card-img-top" src= {this.state.photo[0]} alt="Card image cap"/></a>
+          <a target= "_blank" href = {this.state.site[0]}><img className="card-img-top" src= {this.state.photo[0]} alt="Card image cap"/></a>
             <div className="card card-block">
               <h3 className="card-title">{this.state.name[0]}</h3> 
               <p className="card-text">{this.state.loc[0]}</p>
             </div>
           </div>
           <div className="col-md-4">
-          <a href = {this.state.site[1]}><img className="card-img-top" src={this.state.photo[1]} alt="Card image cap"/></a>
+          <a target= "_blank" href = {this.state.site[1]}><img className="card-img-top" src={this.state.photo[1]} alt="Card image cap"/></a>
             <div className="card card-block">
               <h3 className="card-title">{this.state.name[1]}</h3> 
               <p className="card-text">{this.state.loc[1]}</p>
             </div>
           </div>
           <div className="col-md-4">
-          <a href = {this.state.site[2]}><img className="card-img-top" src={this.state.photo[2]} alt="Card image cap"/></a>
+          <a target= "_blank" href = {this.state.site[2]}><img className="card-img-top" src={this.state.photo[2]} alt="Card image cap"/></a>
             <div className="card card-block">
               <h3 className="card-title">{this.state.name[2]}</h3> 
               <p className="card-text">{this.state.loc[2]}</p>
@@ -830,21 +830,21 @@ class Nightlife extends React.Component {
         <h3> Nightlife </h3>
         <div className="row">
           <div className="col-md-4">
-          <a href = {this.state.site[0]}><img className="card-img-top" src= {this.state.photo[0]} alt="Card image cap"/></a>
+          <a target= "_blank" href = {this.state.site[0]}><img className="card-img-top" src= {this.state.photo[0]} alt="Card image cap"/></a>
             <div className="card card-block">
               <h3 className="card-title">{this.state.name[0]}</h3> 
               <p className="card-text">{this.state.loc[0]}</p>
             </div>
           </div>
           <div className="col-md-4">
-          <a href = {this.state.site[1]}><img className="card-img-top" src={this.state.photo[1]} alt="Card image cap"/></a>
+          <a target= "_blank" href = {this.state.site[1]}><img className="card-img-top" src={this.state.photo[1]} alt="Card image cap"/></a>
             <div className="card card-block">
               <h3 className="card-title">{this.state.name[1]}</h3> 
               <p className="card-text">{this.state.loc[1]}</p>
             </div>
           </div>
           <div className="col-md-4">
-          <a href = {this.state.site[2]}><img className="card-img-top" src={this.state.photo[2]} alt="Card image cap"/></a>
+          <a target= "_blank" href = {this.state.site[2]}><img className="card-img-top" src={this.state.photo[2]} alt="Card image cap"/></a>
             <div className="card card-block">
               <h3 className="card-title">{this.state.name[2]}</h3> 
               <p className="card-text">{this.state.loc[2]}</p>
@@ -883,21 +883,21 @@ class Kayaking extends React.Component {
         <h3> Kayaking </h3>
         <div className="row">
           <div className="col-md-4">
-          <a href = {this.state.site[0]}><img className="card-img-top" src= {this.state.photo[0]} alt="Card image cap"/></a>
+          <a target= "_blank" href = {this.state.site[0]}><img className="card-img-top" src= {this.state.photo[0]} alt="Card image cap"/></a>
             <div className="card card-block">
               <h3 className="card-title">{this.state.name[0]}</h3> 
               <p className="card-text">{this.state.loc[0]}</p>
             </div>
           </div>
           <div className="col-md-4">
-          <a href = {this.state.site[1]}><img className="card-img-top" src={this.state.photo[1]} alt="Card image cap"/></a>
+          <a target= "_blank" href = {this.state.site[1]}><img className="card-img-top" src={this.state.photo[1]} alt="Card image cap"/></a>
             <div className="card card-block">
               <h3 className="card-title">{this.state.name[1]}</h3> 
               <p className="card-text">{this.state.loc[1]}</p>
             </div>
           </div>
           <div className="col-md-4">
-          <a href = {this.state.site[2]}><img className="card-img-top" src={this.state.photo[2]} alt="Card image cap"/></a>
+          <a target= "_blank" href = {this.state.site[2]}><img className="card-img-top" src={this.state.photo[2]} alt="Card image cap"/></a>
             <div className="card card-block">
               <h3 className="card-title">{this.state.name[2]}</h3> 
               <p className="card-text">{this.state.loc[2]}</p>
@@ -940,21 +940,21 @@ class Shopping extends React.Component {
         <h3> Shopping </h3>
         <div className="row">
           <div className="col-md-4">
-          <a href = {this.state.site[0]}><img className="card-img-top" src= {this.state.photo[0]} alt="Card image cap"/></a>
+          <a target= "_blank" href = {this.state.site[0]}><img className="card-img-top" src= {this.state.photo[0]} alt="Card image cap"/></a>
             <div className="card card-block">
               <h3 className="card-title">{this.state.name[0]}</h3> 
               <p className="card-text">{this.state.loc[0]}</p>
             </div>
           </div>
           <div className="col-md-4">
-          <a href = {this.state.site[1]}><img className="card-img-top" src={this.state.photo[1]} alt="Card image cap"/></a>
+          <a target= "_blank" href = {this.state.site[1]}><img className="card-img-top" src={this.state.photo[1]} alt="Card image cap"/></a>
             <div className="card card-block">
               <h3 className="card-title">{this.state.name[1]}</h3> 
               <p className="card-text">{this.state.loc[1]}</p>
             </div>
           </div>
           <div className="col-md-4">
-          <a href = {this.state.site[2]}><img className="card-img-top" src={this.state.photo[2]} alt="Card image cap"/></a>
+          <a target= "_blank" href = {this.state.site[2]}><img className="card-img-top" src={this.state.photo[2]} alt="Card image cap"/></a>
             <div className="card card-block">
               <h3 className="card-title">{this.state.name[2]}</h3> 
               <p className="card-text">{this.state.loc[2]}</p>
@@ -993,21 +993,21 @@ class Skiing extends React.Component {
         <h3> Skiing </h3>
         <div className="row">
           <div className="col-md-4">
-          <a href = {this.state.site[0]}><img className="card-img-top" src= {this.state.photo[0]} alt="Card image cap"/></a>
+          <a target= "_blank" href = {this.state.site[0]}><img className="card-img-top" src= {this.state.photo[0]} alt="Card image cap"/></a>
             <div className="card card-block">
               <h3 className="card-title">{this.state.name[0]}</h3> 
               <p className="card-text">{this.state.loc[0]}</p>
             </div>
           </div>
           <div className="col-md-4">
-          <a href = {this.state.site[1]}><img className="card-img-top" src={this.state.photo[1]} alt="Card image cap"/></a>
+          <a target= "_blank" href = {this.state.site[1]}><img className="card-img-top" src={this.state.photo[1]} alt="Card image cap"/></a>
             <div className="card card-block">
               <h3 className="card-title">{this.state.name[1]}</h3> 
               <p className="card-text">{this.state.loc[1]}</p>
             </div>
           </div>
           <div className="col-md-4">
-          <a href = {this.state.site[2]}><img className="card-img-top" src={this.state.photo[2]} alt="Card image cap"/></a>
+          <a target= "_blank" href = {this.state.site[2]}><img className="card-img-top" src={this.state.photo[2]} alt="Card image cap"/></a>
             <div className="card card-block">
               <h3 className="card-title">{this.state.name[2]}</h3> 
               <p className="card-text">{this.state.loc[2]}</p>
@@ -1045,21 +1045,21 @@ class Surfing extends React.Component {
         <h3> Surfing </h3>
         <div className="row">
           <div className="col-md-4">
-          <a href = {this.state.site[0]}><img className="card-img-top" src= {this.state.photo[0]} alt="Card image cap"/></a>
+          <a target= "_blank" href = {this.state.site[0]}><img className="card-img-top" src= {this.state.photo[0]} alt="Card image cap"/></a>
             <div className="card card-block">
               <h3 className="card-title">{this.state.name[0]}</h3> 
               <p className="card-text">{this.state.loc[0]}</p>
             </div>
           </div>
           <div className="col-md-4">
-          <a href = {this.state.site[1]}><img className="card-img-top" src={this.state.photo[1]} alt="Card image cap"/></a>
+          <a target= "_blank" href = {this.state.site[1]}><img className="card-img-top" src={this.state.photo[1]} alt="Card image cap"/></a>
             <div className="card card-block">
               <h3 className="card-title">{this.state.name[1]}</h3> 
               <p className="card-text">{this.state.loc[1]}</p>
             </div>
           </div>
           <div className="col-md-4">
-          <a href = {this.state.site[2]}><img className="card-img-top" src={this.state.photo[2]} alt="Card image cap"/></a>
+          <a target= "_blank" href = {this.state.site[2]}><img className="card-img-top" src={this.state.photo[2]} alt="Card image cap"/></a>
             <div className="card card-block">
               <h3 className="card-title">{this.state.name[2]}</h3> 
               <p className="card-text">{this.state.loc[2]}</p>
