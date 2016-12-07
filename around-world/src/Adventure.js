@@ -125,7 +125,6 @@ class Quiz extends React.Component {
       answer=chosenFour[0];
     }
 
-
     this.setState({ answerString: this.state.answerString + ' ' + answer });
     console.log(this.state);
   }
@@ -164,25 +163,25 @@ class Quiz extends React.Component {
       );
       case 2: return (
         <div id="quizContainer">
-          <Image className="image" src="http://www.familysmart.net/images/posts/family-travel-tips.jpg" rounded></Image>
-          <p aria-label="Question" className="questionText">Who are you traveling with?</p>
+          <Image className="image" src="http://static5.businessinsider.com/image/523c8fd0eab8eabf6acb58b7/what-its-like-to-stay-in-the-worlds-best-hotel-where-guests-are-treated-like-indian-royalty.jpg" rounded></Image>
+          <p aria-label="Question" className="questionText">How important is where you stay?</p>
           <div className="answers">
-            <Button className="answerButton" onClick={(e) => { this.handleClick('') } }>Me, Myself, and I</Button>
-            <Button className="answerButton" onClick={(e) => { this.handleClick('') } }>My Lover</Button>
-            <Button className="answerButton" onClick={(e) => { this.handleClick('') } }>My Family</Button>
-            <Button className="answerButton" onClick={(e) => { this.handleClick('') } }>My Friends</Button>
+            <Button className="answerButton" onClick={(e) => { this.handleClick('Hotel') } }>Most Important</Button>
+            <Button className="answerButton" onClick={(e) => { this.handleClick('Hotel') } }>Important</Button>
+            <Button className="answerButton" onClick={(e) => { this.handleClick('') } }>Semi Important</Button>
+            <Button className="answerButton" onClick={(e) => { this.handleClick('') } }>Not Important</Button>
           </div>
         </div>
       );
       case 3: return (
         <div id="quizContainer">
           <Image className="image" src="http://wdy.h-cdn.co/assets/cm/15/09/54f0fbd48fba0_-_1-couple-vacation-tropical-lgn.jpg" rounded></Image>
-          <p aria-label="Question" className="questionText">Why are you traveling?</p>
+          <p aria-label="Question" className="questionText">How important is Romance?</p>
           <div className="answers">
-            <Button className="answerButton" onClick={(e) => { this.handleClick('nightclub') } }>I Want to Celebrate</Button>
-            <Button className="answerButton" onClick={(e) => { this.handleClick('spa') } }>I Want to Escape and Relax</Button>
-            <Button className="answerButton" onClick={(e) => { this.handleClick('hiking') } }>I Want to Adventure and Explore</Button>
-            <Button className="answerButton" onClick={(e) => { this.handleClick('museum') } }>I want to Learn Something New</Button>
+            <Button className="answerButton" onClick={(e) => { this.handleClick('Romantic') } }>>Most Important</Button>
+            <Button className="answerButton" onClick={(e) => { this.handleClick('Romantic') } }>Important</Button>
+            <Button className="answerButton" onClick={(e) => { this.handleClick('') } }>Semi Important</Button>
+            <Button className="answerButton" onClick={(e) => { this.handleClick('') } }>Not Important</Button>
           </div>
         </div>
       );
@@ -191,9 +190,9 @@ class Quiz extends React.Component {
           <Image className="image" src="https://www.visitnc.com/resimg.php/imgcrop/2/38377/preview/800/480/HikeWaterfall.jpg" rounded></Image>
           <p aria-label="Question" className="questionText">How Close Would You Like to be to Nature?</p>
           <div className="answers">
-            <Button className="answerButton" onClick={(e) => { this.handleClick('park') } }>Super Close</Button>
-            <Button className="answerButton" onClick={(e) => { this.handleClick('waterfall') } }>Semi Close</Button>
-            <Button className="answerButton" onClick={(e) => { this.handleClick('lakes') } }>Not So Close</Button>
+            <Button className="answerButton" onClick={(e) => { this.handleClick('Waterfall') } }>Super Close</Button>
+            <Button className="answerButton" onClick={(e) => { this.handleClick('Waterfall') } }>Semi Close</Button>
+            <Button className="answerButton" onClick={(e) => { this.handleClick('') } }>Not So Close</Button>
             <Button className="answerButton" onClick={(e) => { this.handleClick('') } }>Nature? No thanks!</Button>
           </div>
         </div>
