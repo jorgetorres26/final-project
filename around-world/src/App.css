@@ -1,8 +1,3 @@
-.App {
-  text-align: center;
-  background-color:#C6DEFF;
-}
-
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
@@ -35,7 +30,7 @@ h1{
     -1px 1px 0 #000,
      1px 1px 0 #000;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  padding-top: 50px;
+  padding-top: 90px;
 }
 
 h2{
@@ -43,19 +38,15 @@ h2{
   margin-top: 10px;
 }
 
-#map{
-  background-color:pink;
-}
+
 
 #banner{
   background-image: url("http://www.travelkingsus.com/wp-content/uploads/2016/08/TravellingTips_TOPBANNER.jpg");
   margin-top: -80px;
-  height: 365px;
+  height: 275px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
 
 }
-.container {
-  background-color:#CFECEC;
-}
+
