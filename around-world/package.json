@@ -1,6 +1,7 @@
 {
   "name": "around-world",
   "version": "0.1.0",
+  "homepage": "https://jorgetorres26.github.io/final-project/around-world/build", 
   "private": true,
   "devDependencies": {
     "react-scripts": "0.7.0"
