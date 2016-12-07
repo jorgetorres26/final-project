@@ -111,9 +111,9 @@ class Quiz extends React.Component {
           <Image className="image" src="http://images.mentalfloss.com/sites/default/files/styles/article_640x430/public/166142726.jpg" rounded></Image>
           <p aria-label="Question" className="questionText">What is your budget?</p>
           <div className="answers">
-            <Button className="answerButton" onClick={(e) => { this.handleClick('$') } }>$ Almost Free</Button>
-            <Button className="answerButton" onClick={(e) => { this.handleClick('$$') } }>$$ Little Money</Button>
-            <Button className="answerButton" onClick={(e) => { this.handleClick('$$$') } }>$$$ Some Money</Button>
+            <Button className="answerButton" onClick={(e) => { this.handleClick('') } }>$ Almost Free</Button>
+            <Button className="answerButton" onClick={(e) => { this.handleClick('') } }>$$ Little Money</Button>
+            <Button className="answerButton" onClick={(e) => { this.handleClick('') } }>$$$ Some Money</Button>
             <Button className="answerButton" onClick={(e) => { this.handleClick('') } }>$$$$ No Budget</Button>
           </div>
         </div>
