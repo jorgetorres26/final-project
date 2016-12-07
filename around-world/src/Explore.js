@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link, hashHistory } from 'react-router';
 import {Form, FormControl, InputGroup, Button} from 'react-bootstrap';
-import './Explore.css';
 import './A_D_E.css';
 import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
 import Controller from './Controller';
@@ -32,6 +31,7 @@ class Explore extends React.Component {
   }
   
   render() {
+    console.log(this.state.markers);
     var position = [this.state.lat, this.state.lng];
     return (
       <div >

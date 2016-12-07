@@ -1,0 +1,84 @@
+import React from 'react';
+import logo from './logo.svg';
+import './App.css';
+import HomePage from './HomePage';
+import { Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
+import { Link, hashHistory } from 'react-router';
+
+class AboutUs extends React.Component {
+  render() {
+    return (
+      <div id="mapPic" role = "footer">
+        
+      <div className="container">
+
+        <div className="row">
+          <h3 className="footertext">About Us</h3>
+          <br />
+          <div>
+            <p> Around the World is designed to help people find fun and exciting destinations to travel to. 
+            It isn’t for users that have a specific goal in mind or want to purchase travel options here, 
+            it is merely to allow people to see what is doable and help if they are just 
+            starting the search for a vacation. We allow users to explore different 
+            destinations around the world to find places that may interest them and, while providing the Adventure
+             quiz that may help them plan the trip with some insight as opposed to blindly looking 
+            around the web for something they might not even enjoy. This is more tailored to the user. It will 
+            communicate information regarding locations on a map and special recommended destinations. It will also
+             communicate that we want the users to have fun and adventure. This is a website geared toward giving 
+             people something new. </p>
+
+             <p>
+             Our Explore feature allows users to quickly search for destinations according to their moods and wants. The 
+             Adventure feature contains a quiz that will ask the user for information like: budget, number of people, hobbies, etc to 
+             determine destinations that are suitable. The Discover section presents the top rated destinations per interest as picked 
+             from our team of travelers and developers. Our team did a lot of research to hand-pick only the best destinations in the 
+             entire world.
+            </p>
+
+            <p> </p>
+
+          </div>
+          <div className="col-md-3">
+            <center>
+              <img src="https://scontent.xx.fbcdn.net/v/t1.0-9/1003641_10200266217803076_189927918_n.jpg?oh=909e0aff87262396060aac4628f49d93&oe=58FA4A45" className="img-circle" alt="the-brains" />
+              <br />
+              <h4 className="footertext">Sarah<p className="text-muted">Developer</p></h4>
+              <p className="footertext">You can thank all the crazy programming here to this lady.</p><br />
+            </center>
+          </div>
+
+          <div className="col-md-3">
+            <center>
+              <img src="https://scontent.xx.fbcdn.net/v/t1.0-9/20091_10153459144589801_4524922121159965456_n.jpg?oh=ee00f0e4c17a3333d1cf01bd7d51848a&oe=58B2C242" className="img-circle" alt="..." />
+              <br />
+              <h4 className="footertext">Jorge<p className="text-muted">Developer</p></h4>
+              <p className="footertext">All the images here are hand drawn by this man.</p><br />
+            </center>
+          </div>
+
+          <div className="col-md-3">
+            <center>
+              <img src="https://scontent.xx.fbcdn.net/v/t1.0-9/13151594_1213068612044309_1817749460380821887_n.jpg?oh=60ee2ab84066df6b142c8ac52e8b8981&oe=58B5CA82" className="img-circle" alt="..." />
+              <br />
+              <h4 className="footertext">Joe<p className="text-muted">Developer</p></h4>
+              <p className="footertext">This pretty site and the copy it holds are all thanks to this guy.</p><br />
+            </center>
+          </div>
+
+          <div className="col-md-3">
+            <center>
+              <img src="https://scontent.xx.fbcdn.net/v/t1.0-9/12313853_118709101830538_5825856325060765546_n.jpg?oh=fcc1328344ccaea245127d1918aeaed7&oe=58BE7D8D" className="img-circle" alt="the-brains" />
+              <br />
+              <h4 className="footertext">Muhaamed<p className="text-muted">Developer</p></h4>
+              <p className="footertext">You can thank all the crazy programming here to this guy.</p><br />
+            </center>
+          </div>
+
+        </div>
+      </div>
+      </div>
+    );
+  }
+}
+
+export default AboutUs;

@@ -10,17 +10,9 @@ body {
 .carousel-inner > .item > img,
   .carousel-inner > .item > a > img {
       width: 70%;
-      height: 400px;
       margin: auto;
-    
   }
 .item img{
   width: 460px;
   height: 345px;
-}
-
-.carousel-inner > .item > .carousel-caption > h3,
-.carousel-inner > .item > .carousel-caption > p
-{
-  color: white;
 }
