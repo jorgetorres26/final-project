@@ -94,6 +94,38 @@ class Quiz extends React.Component {
     var i = this.state.answerNum;
     i++;
     this.setState({ answerNum: i });
+    // for the continents
+    if (answer === 'Americas'){
+      var NoSAmerica = ["Alberta", "British Columbia", "Manitoba", "New Brunswick", "Newfoundland", "Northwest Territory", "Nova Scotia", "Ontario", "Prince Edward Island", "Quebec", "Saskatchewan", "Yukon Territory",
+                "Alabama", "Alaska", "Airzona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "Dist of Columbia", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", 
+                "Kentucky", "Louisiana", "Maine","Maryland","Massachusetts", "Michigan","Minnesota","Mississippi","Missouri","Montana","Nebraska","Nevada","New Hampshire","New Jersey","New Mexico","New York",
+                "North Carolina","North Dakota","Ohio","Oklahoma","Oregon","Pennsylvania","Rhode Island","South Carolina","South Dakota","Tennessee","Texas","Utah","Vermont","Virginia","Washington","West Virginia",
+                "Wisconsin","Wyoming","Mexico","Argentina","Bolivia","Brazil","Chile","Colombia","Ecuador","Falkland Islands","French Guiana","Guyana","Paraguay","Peru","Suriname","Uruguay","Venezuela"];
+      var chosenOne=_.shuffle(NoSAmerica);
+      answer=chosenOne[0];
+    }
+    if (answer === 'Africa'){
+      var Africa = ["Algeria","Anglola","Benin","Botswana","Burkina Faso","Burundi","Cameroon","Cape Verde","Canary Islands","Central African Republic","Chad","Comoros","Congo","Egypt","Eritrea","Ethiopia","Equatorial Guinea",
+                  "Gabon","Gambia","Ghana","Guinea","Guinea-Bissau","Kenya","Lesotho","Liberia","Libya","Madagascar","Malawi","Mali","Mauritania","Mauritius","Morocco","Mozambique","Namibia","Niger","Nigeria","Reunion","Rwanda",
+                  "Senegal","Seychelles","Sierra Leone","Somalia","South Africa","Sudan","Swaziland","Tanzania","Tunisia","Uganda","Western Sahara","Zambia","Zimbabwe"]
+      var chosenTwo=_.shuffle(Africa);
+      answer=chosenTwo[0];
+    }
+    if (answer === 'EuropeAustralia'){
+      var EandA = ["Albania","Andorra","Armenia","Austria","Belarus","Belgium","Bosnia","Bulgaria","Croatia","Cyprus","Czech Republic","Denmark","England","Estonia","Finland","France","Georgia","Germany","Gibralter","Greece","Hungary",
+                  "Iceland","Ireland","Italy","Latvia","Liechtenstein","Lithuania","Luxembourg","Macedonia","Malta","Monaco","Moldova","Netherlands","Northern Ireland","Norway","Poland","Portugal","Romania","Russia","Scotland",
+                  "Serbia & Montenegro","Slovakia","Slovenia","Spain","Sweden","Switzerland","Turkey","Ukraine","Vatican City","Wales","Australia"];
+      var chosenThree=_.shuffle(EandA);
+      answer=chosenThree[0];
+    }
+    if (answer === 'Asia'){
+      var Asia = ["Bangladesh","Bhutan","Brunei","Burma (Myanmar)","Cambodia","China","Hong Kong","India","Indonesia","Japan","Kazakhstan","Kyrgyzstan","Laos","Macau","Malaysia","Maldives","Mongolia","Nepal","North Korea","Pakistan",
+                "Philippines","Singapore","South Korea","Sri Lanka","Taiwan","Tajikistan","Thailand","Tibet","Turkmenistan","Uzbekistan","Vietnam"];
+      var chosenFour=_.shuffle(Asia);
+      answer=chosenFour[0];
+    }
+
+
     this.setState({ answerString: this.state.answerString + ' ' + answer });
     console.log(this.state);
   }
@@ -123,10 +155,10 @@ class Quiz extends React.Component {
           <Image className="image" src="http://www.worldatlas.com/aatlas/newart/continentslg.gif" rounded></Image>
           <p aria-label="Question" className="questionText">Where would you prefer to explore?</p>
           <div className="answers">
-            <Button className="answerButton" onClick={(e) => { this.handleClick('america') } }>North America</Button>
-            <Button className="answerButton" onClick={(e) => { this.handleClick('') } }>No Preference</Button>
-            <Button className="answerButton" onClick={(e) => { this.handleClick('europe') } }>Europe</Button>
-            <Button className="answerButton" onClick={(e) => { this.handleClick('asia') } }>Asia</Button>
+            <Button className="answerButton" onClick={(e) => { this.handleClick('Americas') } }>North or South America</Button>
+            <Button className="answerButton" onClick={(e) => { this.handleClick('Africa') } }>Africa</Button>
+            <Button className="answerButton" onClick={(e) => { this.handleClick('EuropeAustralia') } }>Europe or Australia</Button>
+            <Button className="answerButton" onClick={(e) => { this.handleClick('Asia') } }>Asia</Button>
           </div>
         </div>
       );
@@ -136,8 +168,8 @@ class Quiz extends React.Component {
           <p aria-label="Question" className="questionText">Who are you traveling with?</p>
           <div className="answers">
             <Button className="answerButton" onClick={(e) => { this.handleClick('') } }>Me, Myself, and I</Button>
-            <Button className="answerButton" onClick={(e) => { this.handleClick('Romantic') } }>My Lover</Button>
-            <Button className="answerButton" onClick={(e) => { this.handleClick('Family') } }>My Family</Button>
+            <Button className="answerButton" onClick={(e) => { this.handleClick('') } }>My Lover</Button>
+            <Button className="answerButton" onClick={(e) => { this.handleClick('') } }>My Family</Button>
             <Button className="answerButton" onClick={(e) => { this.handleClick('') } }>My Friends</Button>
           </div>
         </div>
