@@ -3,7 +3,9 @@ import { Link, hashHistory } from 'react-router';
 import { Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
 import { Carousel, Button } from 'react-bootstrap';
 import './index.css';
-import {arts} from './Discover.js'
+import {arts,beaches,cycling,birding,business,
+  camping,gambling,golfing,hiking,parks,nightlife,
+  shopping,skiing,surfing,kayaking} from './Discover.js'
 
 
 class Homepage extends React.Component {
@@ -11,11 +13,11 @@ class Homepage extends React.Component {
     super(props);
   }
   render() {
+    
     return (
       
       <div className="container">
-        <h2>This is the home page</h2>
-       
+        
         <div id="myCarousel" className="carousel slide" data-ride="carousel">
 
           <ol className="carousel-indicators">
@@ -24,58 +26,143 @@ class Homepage extends React.Component {
             <li data-target="#myCarousel" data-slide-to="2"></li>
             <li data-target="#myCarousel" data-slide-to="3"></li>
             <li data-target="#myCarousel" data-slide-to="4"></li>
-           
+            <li data-target="#myCarousel" data-slide-to="5"></li>
+            <li data-target="#myCarousel" data-slide-to="6"></li>
+            <li data-target="#myCarousel" data-slide-to="7"></li>
+            <li data-target="#myCarousel" data-slide-to="8"></li>
+            <li data-target="#myCarousel" data-slide-to="9"></li>
+            <li data-target="#myCarousel" data-slide-to="10"></li>
+            <li data-target="#myCarousel" data-slide-to="11"></li>
+            <li data-target="#myCarousel" data-slide-to="12"></li>
+            <li data-target="#myCarousel" data-slide-to="13"></li>
+            <li data-target="#myCarousel" data-slide-to="14"></li>
+            
           </ol>
 
 
           <div className="carousel-inner" role="listbox">
+            
             <div className="item active">
-              <img src="https://s-media-cache-ak0.pinimg.com/originals/6e/aa/5d/6eaa5ddf4a67aca7e6c3f3f73d185076.jpg" alt="location" />
-              <div className="carousel-caption">
-                <h3>Dubai</h3>
-                <p>The Burj Khalifa is a megatall skyscraper in Dubai, 
-                United Arab Emirates. It is the tallest structure 
-                in the world, standing at 829.8 m</p>
-              </div>
-            </div>
-
-            <div className="item">
-              <img src="http://www.planetware.com/photos-large/EGY/egypt-cairo-pyramids-of-giza-and%20camels-2.jpg" alt="location" />
-              <div className="carousel-caption">
-                <h3>Egypt</h3>
-                <p>The Great Pyramid of Giza is the oldest 
-                and largest of the three pyramids in the Giza 
-                pyramid complex bordering what is now El Giza, 
-                Egypt. It is the oldest of the Seven Wonders of 
-                the Ancient World, and the only one to remain largely intact.</p>
-              </div>
-            </div>
-
-            <div className="item">
-              <img src="http://www.atlantisbahamas.com/media/Things%20To%20Do/Overview/ThingsToDo_DolphinCay.jpg" alt="location" />
-              <div className="carousel-caption">
-                <h3>Bahamas(Atlantis)</h3>
-                <p>Visit Atlantis and have an experience you have never had before,
-                Atlantis is the paradise on earth with so much adventure that will 
-                blow your mind</p>
-              </div>
-            </div>
-
-            <div className="item">
               <img src={arts[0].photo} alt="location" />
               <div className="carousel-caption">
-                <h3>Location</h3>
-                <p>The description of the perticular location should be here.</p>
+                <h3>{arts[0].loc}</h3>
+                <p>{arts[0].name}</p>
               </div>
             </div>
 
             <div className="item">
-              <img src="http://4.bp.blogspot.com/-QPT_vEZdYcc/VPV6jSHYbdI/AAAAAAAAAPI/sFVQx0KHfmA/s1600/54ac66dd-68de-4999-9231-bc674d21980d_Pemandangan-matahari-tenggelam-di-Ujung-Genteng.jpg" alt="location" />
+              <img src={beaches[0].photo} alt="location" />
               <div className="carousel-caption">
-                <h3>Location</h3>
-                <p>The description of the perticular location should be here.</p>
+                <h3>{beaches[0].loc}</h3>
+                <p>{beaches[0].name}</p>
               </div>
             </div>
+
+            <div className="item">
+              <img src={cycling[0].photo} alt="location" />
+              <div className="carousel-caption">
+                <h3>{cycling[0].loc}</h3>
+                <p>{cycling[0].name}</p>
+              </div>
+            </div>
+
+            <div className="item">
+              <img src={birding[0].photo} alt="location" />
+              <div className="carousel-caption">
+                <h3>{birding[0].loc}</h3>
+                <p>{birding[0].name}</p>
+              </div>
+            </div>
+
+            <div className="item">
+              <img src={business[0].photo} alt="location" />
+              <div className="carousel-caption">
+                <h3>{business[0].loc}</h3>
+                <p>{business[0].name}</p>
+              </div>
+            </div>
+
+            <div className="item">
+              <img src={camping[0].photo} alt="location" />
+              <div className="carousel-caption">
+                <h3>{camping[0].loc}</h3>
+                <p>{camping[0].name}</p>
+              </div>
+            </div>
+
+            <div className="item">
+              <img src={gambling[0].photo} alt="location" />
+              <div className="carousel-caption">
+                <h3>{gambling[0].loc}</h3>
+                <p>{gambling[0].name}</p>
+              </div>
+            </div>
+
+            <div className="item">
+              <img src={golfing[0].photo} alt="location" />
+              <div className="carousel-caption">
+                <h3>{golfing[0].loc}</h3>
+                <p>{golfing[0].name}</p>
+              </div>
+            </div>
+
+            <div className="item">
+              <img src={hiking[0].photo} alt="location" />
+              <div className="carousel-caption">
+                <h3>{hiking[0].loc}</h3>
+                <p>{hiking[0].name}</p>
+              </div>
+            </div>
+
+            <div className="item">
+              <img src={parks[0].photo} alt="location" />
+              <div className="carousel-caption">
+                <h3>{parks[0].loc}</h3>
+                <p>{parks[0].name}</p>
+              </div>
+            </div>
+
+            <div className="item">
+              <img src={nightlife[0].photo} alt="location" />
+              <div className="carousel-caption">
+                <h3>{nightlife[0].loc}</h3>
+                <p>{nightlife[0].name}</p>
+              </div>
+            </div>
+
+            <div className="item">
+              <img src={shopping[0].photo} alt="location" />
+              <div className="carousel-caption">
+                <h3>{shopping[0].loc}</h3>
+                <p>{shopping[0].name}</p>
+              </div>
+            </div>
+
+            <div className="item">
+              <img src={skiing[0].photo} alt="location" />
+              <div className="carousel-caption">
+                <h3>{skiing[0].loc}</h3>
+                <p>{skiing[0].name}</p>
+              </div>
+            </div>
+
+             <div className="item">
+              <img src={surfing[0].photo} alt="location" />
+              <div className="carousel-caption">
+                <h3>{surfing[0].loc}</h3>
+                <p>{surfing[0].name}</p>
+              </div>
+            </div>
+            
+             <div className="item">
+              <img src={kayaking[0].photo} alt="location" />
+              <div className="carousel-caption">
+                <h3>{kayaking[0].loc}</h3>
+                <p>{kayaking[0].name}</p>
+              </div>
+            </div>
+
+          
           </div>
 
           <a className="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
@@ -87,10 +174,7 @@ class Homepage extends React.Component {
             <span className="sr-only">Next</span>
           </a>
         </div>
-<div>
-<p>i need to add extra stuff on the homepage right after the slider to make it look 
-nicer. i might also add a simple footer on every page to make it look like a website</p>
-</div>
+
       </div>
 
      
