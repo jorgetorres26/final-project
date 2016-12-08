@@ -13,7 +13,7 @@ class Adventure extends React.Component {
     super(props);
     this.state = {
       quizStarted: false,
-      result: { photo: '', info: '' }
+      result: { photo: 1, info: '' }
     }
     this.quizStart = this.quizStart.bind(this);
     this.fetchResult = this.fetchResult.bind(this);
@@ -24,23 +24,25 @@ class Adventure extends React.Component {
   }
   // Show start button for quiz. Once clicked, quiz starts and start button is hidden
 
-  fetchResult(string) {
+  fetchResult(array) {
     var thisComponent = this;
-    console.log(string);
-    Controller.searchMap(string)
+    console.log(array);
+    Controller.answerMap(array)
       .then(function (data) {
 
         var baseUrl = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=";
         var key = "&key=AIzaSyAWOXIjZamr-SLhYSnzbMm4_VGbQ9EBmPI";
-        var ref = data.results[0].photos[0].photo_reference;
+        var newData = data.results;
+        var randomData = _.shuffle(newData);
+        var ref = randomData[0].photos[0].photo_reference;
         console.log(ref);
         thisComponent.setState({
           result: {
             photo: baseUrl + ref + key,
-            info: data.results[0]
+            info: randomData[0]
           }
         });
-      }).catch((err) => this.setState({ result: [] }));
+      }).catch((err) => this.setState({ result: {photo: 0, info: '' }}));
 
   }
   render() {
@@ -63,13 +65,18 @@ class Adventure extends React.Component {
           <h2> Adventure Quiz </h2>
           <div id="contentContainer">
             <Quiz resultFunction={this.fetchResult} />
-            {this.state.result.photo ?
+            {this.state.result.photo !== 1 ?
+              <div>
+              {this.state.result.photo !== 0 ?
               <div className="resultsInfo">
                 <h3> Try this place! </h3>
                 <img className="image" src={this.state.result.photo} />
                 <p>Name: {this.state.result.info.name}</p>
                 <p>Address: {this.state.result.info.formatted_address}</p>
               </div>
+              : <h4>Sorry your results cannot be matched with anything.</h4>
+            }
+            </div>
               : null
             }
           </div>
@@ -86,7 +93,8 @@ class Quiz extends React.Component {
     super(props);
     this.state = {
       answerNum: 0,
-      answerString: ''
+      answerString: '',
+      answerArray:[]
     };
     this.handleClick = this.handleClick.bind(this);
     this.handleResult = this.handleResult.bind(this);
@@ -95,13 +103,15 @@ class Quiz extends React.Component {
     var i = this.state.answerNum;
     i++;
     this.setState({ answerNum: i });
+    var j = this.state.answerArray;
+    j.push(answer);
     this.setState({ answerString: this.state.answerString + ' ' + answer });
     console.log(this.state);
   }
 
   handleResult(event) {
-    this.props.resultFunction(this.state.answerString);
-    console.log(this.state.answerString);
+    this.props.resultFunction(this.state.answerArray);
+    //console.log(this.state.answerString);
   }
 
   render() {
@@ -124,10 +134,11 @@ class Quiz extends React.Component {
           <Image className="image" src="http://www.worldatlas.com/aatlas/newart/continentslg.gif" rounded></Image>
           <p aria-label="Question" className="questionText">Where would you prefer to explore?</p>
           <div className="answers">
-            <Button className="answerButton" onClick={(e) => { this.handleClick('america') } }>North America</Button>
-            <Button className="answerButton" onClick={(e) => { this.handleClick('') } }>No Preference</Button>
-            <Button className="answerButton" onClick={(e) => { this.handleClick('europe') } }>Europe</Button>
-            <Button className="answerButton" onClick={(e) => { this.handleClick('asia') } }>Asia</Button>
+            <Button className="answerButton" onClick={(e) => { this.handleClick('54.5260,-105.2551') } }>North America</Button>
+            <Button className="answerButton" onClick={(e) => { this.handleClick('53.34,23.06') } }>Europe</Button>
+            <Button className="answerButton" onClick={(e) => { this.handleClick('35.04,127.1') } }>Asia</Button>
+            <Button className="answerButton" onClick={(e) => { this.handleClick('8.59,-6.37') } }>Africa</Button>
+            <Button className="answerButton" onClick={(e) => { this.handleClick('-34.0479,-65.6197') } }>South America</Button>
           </div>
         </div>
       );
@@ -148,10 +159,10 @@ class Quiz extends React.Component {
           <Image className="image" src="http://wdy.h-cdn.co/assets/cm/15/09/54f0fbd48fba0_-_1-couple-vacation-tropical-lgn.jpg" rounded></Image>
           <p aria-label="Question" className="questionText">Why are you traveling?</p>
           <div className="answers">
-            <Button className="answerButton" onClick={(e) => { this.handleClick('nightclub') } }>I Want to Celebrate</Button>
-            <Button className="answerButton" onClick={(e) => { this.handleClick('spa') } }>I Want to Escape and Relax</Button>
+            <Button className="answerButton" onClick={(e) => { this.handleClick('bar||club') } }>I Want to Celebrate</Button>
+            <Button className="answerButton" onClick={(e) => { this.handleClick('beach') } }>I Want to Escape and Relax</Button>
             <Button className="answerButton" onClick={(e) => { this.handleClick('hiking') } }>I Want to Adventure and Explore</Button>
-            <Button className="answerButton" onClick={(e) => { this.handleClick('museum') } }>I want to Learn Something New</Button>
+            <Button className="answerButton" onClick={(e) => { this.handleClick('tour') } }>I want to Learn Something New</Button>
           </div>
         </div>
       );
@@ -161,25 +172,13 @@ class Quiz extends React.Component {
           <p aria-label="Question" className="questionText">How Close Would You Like to be to Nature?</p>
           <div className="answers">
             <Button className="answerButton" onClick={(e) => { this.handleClick('park') } }>Super Close</Button>
-            <Button className="answerButton" onClick={(e) => { this.handleClick('waterfall') } }>Semi Close</Button>
-            <Button className="answerButton" onClick={(e) => { this.handleClick('lakes') } }>Not So Close</Button>
-            <Button className="answerButton" onClick={(e) => { this.handleClick('') } }>Nature? No thanks!</Button>
+            <Button className="answerButton" onClick={(e) => { this.handleClick('zoo') } }>Semi Close</Button>
+            <Button className="answerButton" onClick={(e) => { this.handleClick('establishment') } }>Not So Close</Button>
+            <Button className="answerButton" onClick={(e) => { this.handleClick('bar') } }>Nature? No thanks!</Button>
           </div>
         </div>
       );
-      case 5: return (
-        <div id="quizContainer">
-          <Image className="image" src="http://images.r.cruisecritic.com/features/2016/03/10-lux-cruise-main.jpg" rounded></Image>
-          <p aria-label="Question" className="questionText">How would you like to travel?</p>
-          <div className="answers" onClick={this.fetchData}>
-            <Button className="answerButton" onClick={(e) => { this.handleClick('') } }>Car or Bus</Button>
-            <Button className="answerButton" onClick={(e) => { this.handleClick('cruise') } }>Boat</Button>
-            <Button className="answerButton" onClick={(e) => { this.handleClick('') } }>Plane</Button>
-            <Button className="answerButton" onClick={(e) => { this.handleClick('') } }>No Preference</Button>
-          </div>
-        </div>
-      );
-      case 6:
+      case 5:
         return (
           <div aria-label="Results" id="quizContainer">
             <h3> RESULTS: </h3>
